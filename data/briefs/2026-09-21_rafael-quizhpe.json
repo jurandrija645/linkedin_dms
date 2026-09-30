@@ -1,0 +1,109 @@
+{
+  "name": "Rafael Quizhpe",
+  "linkedin_url": "https://www.linkedin.com/in/rafaelquizhpe",
+  "role": "CEO i vlasnik",
+  "company": "Pro Roofers & General Contractor LLC (Pro Roofers GC)",
+  "company_website": "https://www.pro-roofersgc.com/",
+  "location": "Kearny, New Jersey, SAD",
+  "vertical": "roofing",
+  "identity_confidence": "high",
+  "identity_note": "LinkedIn URL iz CSV-a vodi na profil s naslovom Pro Roofers & General Contractor LLC, a Directorii listing za Pro Roofers GC u Kearnyju navodi Rafaela Quizhpea kao glavnu osobu. Postoji drugi Rafael Quizhpe u NJ roofingu (podocarpus roofing, LinkedIn URL rafael-quizhpe-4937446b), to nije ovaj. Prije snimanja svejedno baci oko na headline na profilu.",
+  "tier": "A",
+  "tier_reason": "Vlasnik roofing firme u New Jerseyju, sam donosi odluke. Odlicne recenzije, ali sajt ne pretvara promet u upite.",
+  "asset_type": "website_demo",
+  "asset_reason": "Pravilo 4. Pogodila cetiri kriterija: template dizajn, nema live chata, jedini put do njih je genericki formular sa Select a Service padajucim izbornikom bez kvalifikacije, i nema stranica po gradovima sto je za roofing najveci SEO kanal. Identitet je high, firma je samostalni LLC bez franšiznog brenda.",
+  "one_liner": "Sljedeci: Rafael Quizhpe. Vlasnik Pro Roofers GC u Kearnyju, New Jersey, roofing i general contracting. Loom fokusiraj na redizajniranu stranicu koju si mu vec napravio, pokazi inquiry flow i AI asistenta uzivo.",
+  "summary": [
+    "Pro Roofers GC osnovan 2016. u Kearnyju, NJ. Krovovi, siding, gutteri, paving, remodeling. NJ licenca 13VH09321400.",
+    "Google ocjena 5.0 iz 32 recenzije. Reputacija nije problem, put od posjetitelja do upita jest.",
+    "Kearny i okolica imaju veliku ekvadorsku i hispansku zajednicu, a sajt nema spanjolsku verziju."
+  ],
+  "observed_on_site": [
+    "Template dizajn, bez stranica po gradovima. Navigacija je Home, Services, Book Online, Contact, Reviews, Gallery, Blog.",
+    "Nema live chata.",
+    "Book Online postoji u navigaciji, ali iza njega nema stvarnog sustava za rezervaciju termina.",
+    "Jedini put do njih je formular za ponudu s generickim Select a Service padajucim izbornikom, bez ijednog pitanja koje kvalificira posao.",
+    "Telefon 973-388-6132, adresa 721 Forest St., Kearny, NJ 07032. Radno vrijeme nije navedeno nigdje.",
+    "Nema spanjolske verzije sajta.",
+    "Google ocjena 5.0 iz 32 recenzije nije prikazana na naslovnici iako postoji Reviews stranica.",
+    "Sajt tvrdi preko 25 godina iskustva i preko 500 zadovoljnih klijenata, ali nema imena vlasnika ni tima nigdje.",
+    "Stranica je na Wixu.",
+    "U kodu nema nijednog mjernog alata. Nema Google Analyticsa, nema Meta pixela, nema pracenja poziva."
+  ],
+  "offer": "Redizajnirana stranica koja je vec napravljena i hostana: novi inquiry flow koji kvalificira posao, AI asistent na engleskom i spanjolskom, i lokalne SEO stranice za Kearny, Belleville, Harrison i Newark.",
+  "hook_type": "instant_quote",
+  "hook_line": "Imas 5.0 iz 32 recenzije, a svatko tko dodje na sajt zavrsi na istom Select a Service padajucem izborniku. Napravio sam ti verziju koja radi drugacije, ziva je, mozes je kliknuti.",
+  "video_beats": [
+    "0-10s: pro-roofersgc.com otvoren na ekranu, ime, i tvrdnja da 5.0 iz 32 recenzije ne pomaze ako posjetitelj zavrsi na generickom formularu.",
+    "10-20s: prebaci na demo. Reci da je koncept napravljen na temelju njihove javne stranice, da je ziv i da ce link dobiti u poruci.",
+    "20-45s: ispuni novi inquiry flow uzivo na ekranu. Tip objekta, vrsta problema, starost krova, adresa, fotografija, termin.",
+    "45-70s: AI asistent uzivo. Postavi mu pitanje o zamjeni krova pa isto pitanje na spanjolskom da se vidi da radi dvojezicno.",
+    "70-90s: CTA. Jedna recenica da uz ovo idu i lokalne stranice za Kearny i okolicu, pa pitanje zeli li da se to prebaci na njegovu domenu."
+  ],
+  "show_on_their_site": [
+    {
+      "what": "Naslovna, tu se vidi Select a Service formular",
+      "url": "https://www.pro-roofersgc.com/"
+    },
+    {
+      "what": "Book Online, da se vidi da iza linka nema stvarnog bookinga",
+      "url": "https://www.pro-roofersgc.com/"
+    }
+  ],
+  "website_demo": {
+    "why": "Recenzije su mu vec odlicne, znaci promet i preporuke postoje. Ono sto ne postoji je put od posjetitelja do kvalificiranog upita. Redizajn je kod njega najkraci put do vidljive razlike, a AI asistent unutra je prirodan ulaz u ostale usluge.",
+    "current_site_problems": [
+      "Jedini put do upita je genericki formular sa Select a Service izbornikom, bez pitanja koja kvalificiraju posao.",
+      "Book Online stoji u navigaciji ali iza njega nema stvarnog sustava za rezervaciju.",
+      "Nema live chata, pa upiti izvan radnog vremena nestaju.",
+      "Nema stranica po gradovima, a to je za roofing glavni lokalni SEO kanal.",
+      "Nema spanjolske verzije iako radi u Kearnyju i okolici.",
+      "Ocjena 5.0 iz 32 recenzije nije prikazana na naslovnici."
+    ],
+    "pages_to_build": [
+      "home",
+      "roofing services",
+      "free inspection i quote",
+      "Kearny",
+      "Belleville",
+      "Harrison",
+      "Newark",
+      "reviews"
+    ],
+    "ai_widget": "Odgovara na pitanja o zamjeni i popravku krova, o steti od oluje i o tome kako ide prijava osiguranju, trazi zip kod i predlaze termin inspekcije. Radi na engleskom i spanjolskom.",
+    "inquiry_flow": "Tip objekta (kuca ili poslovni prostor), vrsta problema (curenje, zamjena, steta od oluje, inspekcija), starost krova, adresa i zip, upload fotografije krova, izbor termina za inspekciju, pa potvrda SMS-om i emailom.",
+    "seo_fixes": [
+      "Zasebne stranice za Kearny, Belleville, Harrison i Newark",
+      "Title i meta opis po svakoj usluzi umjesto jednog generickog",
+      "RoofingContractor schema markup s licencom 13VH09321400",
+      "Google Business recenzije 5.0 iz 32 povucene na naslovnicu",
+      "Spanjolska verzija kljucnih stranica"
+    ],
+    "brand_risk": "none",
+    "demo_url": "",
+    "demo_status": "todo"
+  },
+  "workflows": [],
+  "language": "en",
+  "dm": "Rafael, you have 5.0 from 32 reviews and the site still puts everyone through one Select a Service dropdown. No chat, no Spanish, no page for Kearny. So I rebuilt it as a concept and put it online, you can click it. Random message, I know. Made it just for you. [loom] [demo]",
+  "followup_viewed": "Rafael, saw you opened the video. Want me to point the demo at your domain for a week so you can watch what it does with real traffic? Nothing to sign, and if it does nothing for you I take it down.",
+  "followup_not_viewed": "Rafael, trying once more in case LinkedIn buried this. I rebuilt your site as a concept, it is live, and the 90 second video walks through the new quote flow and the bilingual assistant. If it is not a fit just say so and I will stop.",
+  "avoid": [
+    "Ne govoriti da su mu recenzije lose. 5.0 iz 32 je odlicno i to je uporiste, ne problem.",
+    "Nikad reci ni natuknuti da je demo njegova stranica. Uvijek reci da je koncept napravljen na temelju javne stranice.",
+    "Ne izmisljati koliko poslova gubi ni postotke konverzije. Nemamo taj podatak.",
+    "Ne pretpostavljati da govori spanjolski. Spanjolska verzija se nudi zbog trzista u Kearnyju, ne zbog njega.",
+    "Ne spominjati drugog Rafaela Quizhpea ni podocarpus roofing."
+  ],
+  "sources": [
+    "https://www.pro-roofersgc.com/",
+    "https://www.linkedin.com/in/rafaelquizhpe/",
+    "https://directorii.com/us/nj/kearny/proroofers-gc-reviews-12634/",
+    "https://www.zoominfo.com/c/the-pro-roofers-gc/1291264172"
+  ],
+  "tech_stack": [
+    "Wix",
+    "LocalBusiness schema"
+  ],
+  "opener": "Rafael, odd question. There is no analytics or pixel on your site at all, nothing tracking where visitors come from. How do you know today which jobs came off the website and which came from word of mouth?"
+}

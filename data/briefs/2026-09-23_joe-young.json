@@ -1,0 +1,68 @@
+{
+  "name": "Joe Young",
+  "linkedin_url": "https://www.linkedin.com/in/joe-young-8b30a6166",
+  "role": "Sales Manager",
+  "company": "EcoFlex Solutions",
+  "company_website": "https://ecoflexsolutions.co.uk/",
+  "location": "Newport, Juzni Wales, UK",
+  "vertical": "solar",
+  "identity_confidence": "high",
+  "identity_note": "Osoba i firma potvrdjene: LinkedIn URL iz CSV-a vodi na Joe Younga u EcoFlex Solutions, Greater Newport Area, a Trustpilot recenzije firme poimence spominju Joea kao onoga koji kupcima objasnjava proces. Ono sto NIJE potvrdjeno je koliko ima ovlasti. Naslov je Sales Manager, ne head of sales, a firma raste i ima vise razina. Zato ide tier B, ne A.",
+  "tier": "B",
+  "tier_reason": "Solar je puna vertikala i propust je jasan, ali je Sales Manager a ne vlasnik ni voditelj prodaje, pa nije sigurno odlucuje li o alatima. Ne snima se na slijepo, prvo se pita.",
+  "asset_type": "n8n_loom",
+  "asset_reason": "Pravilo 2, tier B uvijek ide n8n_loom. I neovisno o tome, stranica im je moderna, ima quote wizard i Intercom chat, pa bi po pravilu 5 svejedno ispao n8n_loom.",
+  "one_liner": "Sljedeci: Joe Young. Sales Manager u EcoFlex Solutions, solar i baterije u juznom Walesu. Ne snimaj jos, salje se opener pa permission DM i ceka se potvrda ima li ovlasti.",
+  "summary": [
+    "EcoFlex Solutions radi solarne panele, baterije, EV punjace i toplinske pumpe po juznom Walesu, od Cardiffa i Newporta do Swanseaa i Wrexhama.",
+    "Firma brzo raste, showroomi u Cardiffu i Cheltenhamu, najavljen Bristol. MCS akreditacija i jamstvo na najbolju cijenu.",
+    "Joea kupci poimence hvale u recenzijama kao covjeka koji im objasni cijeli proces, znaci on je taj kroz kojeg prolaze upiti."
+  ],
+  "observed_on_site": [
+    "Stranica je moderna i uredna, glavni CTA je Get Your Free Quote kroz cijelu stranicu.",
+    "Postoji quote wizard, dakle formular u koracima, a ne jedan genericki obrazac.",
+    "U kodu je Intercom, znaci imaju live chat.",
+    "Nema instant procjene ni kalkulatora ustede, iako prodaju solar i baterije gdje je povrat prvo pitanje kupca.",
+    "Nema online zakazivanja termina za izlazak na teren.",
+    "Nema pracenja poziva.",
+    "Google ocjena 5/5 prikazana je s recenzijama kupaca.",
+    "Telefon 01633 848959. Radno vrijeme nije navedeno.",
+    "Obecanje na naslovnici je od upita do ustede u cetiri koraka, uz fiksnu cijenu."
+  ],
+  "offer": "Instant procjena ustede i povrata na samoj stranici, koja se odmah pretvori u kvalificiran upit i dogovoren izlazak na teren.",
+  "hook_type": "instant_quote",
+  "hook_line": "Obecavate put od upita do ustede u cetiri koraka, a covjek koji dodje na stranicu ne moze nigdje vidjeti koliko bi zapravo ustedio dok mu netko ne odgovori.",
+  "video_beats": [],
+  "show_on_their_site": [],
+  "workflows": [
+    {
+      "id": "zmWzs6Eymm0BehhY",
+      "why": "Pokriva put od web upita do kvalificiranog i bukiranog termina, sto je tocno ono sto im fali iza quote wizarda."
+    },
+    {
+      "id": "EeDJ4upAU5cfjHTO",
+      "why": "Podsjetnik prije izlaska na teren, jer kod solarnih procjena dio dogovorenih termina propadne."
+    }
+  ],
+  "tech_stack": ["Intercom", "Google Tag Manager"],
+  "opener": "Joe, quick question. You have Intercom on the site and the quote wizard, but nothing that shows a homeowner their actual savings before someone gets back to them. Is that deliberate, or just not built yet?",
+  "language": "en",
+  "dm": "",
+  "permission_dm": "Joe, you run the enquiries at EcoFlex from what I can tell. I build the bit that sits behind a quote wizard, instant savings number on screen, then a booked survey. Happy to record 90 seconds showing what that would look like on your site. Want me to send it? Andrew",
+  "followup_viewed": "",
+  "followup_not_viewed": "Joe, just following up on the question about the savings number. If lead handling is not your call, point me at whoever it is and I will stop filling your inbox. Andrew",
+  "avoid": [
+    "Ne govoriti da im je stranica losa. Moderna je, ima quote wizard i chat.",
+    "Ne nuditi redizajn stranice, propust nije tamo.",
+    "Ne pretpostavljati da odlucuje o budzetu. Zato i ide permission DM.",
+    "Ne izmisljati koliko upita gube ni koliki je prosjecni povrat na solar u UK-u. Bez izvora se brojke ne koriste.",
+    "Ne snimati Loom prije nego odgovori.",
+    "Ne tvrditi da Intercom chat nitko ne gleda. Vidimo da je instaliran, ne i tko ga opsluzuje."
+  ],
+  "sources": [
+    "https://www.linkedin.com/in/joe-young-8b30a6166/",
+    "https://ecoflexsolutions.co.uk/",
+    "https://ecoflexsolutions.co.uk/about-us/",
+    "https://www.trustpilot.com/review/ecoflexsolutions.co.uk"
+  ]
+}

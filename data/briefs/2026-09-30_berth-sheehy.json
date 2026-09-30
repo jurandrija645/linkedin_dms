@@ -1,0 +1,83 @@
+{
+  "name": "Berth Sheehy",
+  "linkedin_url": "https://www.linkedin.com/in/berth-sheehy-7a053740",
+  "role": "CEO i osnivac",
+  "company": "Energywise Ireland",
+  "company_website": "https://www.energywiseireland.ie/",
+  "location": "Cork, Irska",
+  "vertical": "solar",
+  "identity_confidence": "high",
+  "identity_note": "Potvrdjeno u Irish Examineru, Building Ireland Magazineu i na Instagramu firme: Berth Sheehy je CEO Energywise Irelanda, poceo kao elektricar 2004, firmu osnovao 2009. Supruga Rosemarie je Chief Digital Officer, a Darren Vaughan COO.",
+  "tier": "A",
+  "tier_reason": "Osnivac i CEO solar, heat pump i retrofit firme u Irskoj, SEAI One Stop Shop. Jasan propust: nema chata ni bookinga, radno vrijeme pon-pet 8-17, a upiti idu kroz HubSpot formulare.",
+  "asset_type": "n8n_loom",
+  "asset_reason": "Pravilo 3. Footer kaze Website designed by Speire, stranica je custom WordPress tema s HubSpotom, a firma ima Chief Digital Officera koja je CEO-ova supruga. Redizajn bi isao preko nje i preko agencije koju imaju, pa demo nema smisla. Ako ipak zelis demo, prvo provjeri na Speire portfoliju kad je stranica radjena.",
+  "one_liner": "Sljedeci: Berth Sheehy. CEO i osnivac Energywise Irelanda iz Corka, solar, heat pumpe i SEAI One Stop Shop. Loom fokusiraj na to sto se dogodi s upitom koji stigne izvan 8-17.",
+  "summary": [
+    "Energywise Ireland, Cork, osnovan 2009. Solar PV, baterije, heat pumpe, EV punjaci, ventilacija, SEAI One Stop Shop za kompletne energetske obnove. Uredi u Corku, Kerryju i Clareu.",
+    "Firma raste, najavili 100 novih radnih mjesta u Munsteru uz One Stop Shop.",
+    "Berth je osnivac i CEO, donosi odluke. Digital vodi supruga Rosemarie kao Chief Digital Officer."
+  ],
+  "observed_on_site": [
+    "Radno vrijeme pon-pet 08:00-17:00, navedeno na kontakt stranici.",
+    "Tri telefona: Cork 021 430 8185, Kerry 066 401 7028, Clare 065 671 9133.",
+    "Nema live chata ni ikakvog chat widgeta.",
+    "Nema online bookinga. Book Free Consultation vodi na Make a Request hub s pet formulara (servis, commissioning, heat pump gas up, refer a friend, energy monitoring).",
+    "Nema kalkulatora grantova ni ustede, iako je SEAI grant glavna tema stranice.",
+    "Sekcija What our clients say postoji, ali bez ocjene i bez Google ili Trustpilot widgeta.",
+    "Nema stranica po gradovima, usluge su podijeljene po segmentu (domestic, commercial, agricultural).",
+    "Footer: Website designed by Speire."
+  ],
+  "offer": "Speed-to-lead iza HubSpot formulara: svaki One Stop Shop upit dobije odgovor i termin konzultacije u par minuta, i navecer i vikendom.",
+  "hook_type": "speed_to_lead",
+  "hook_line": "Radite pon-pet do 17, a One Stop Shop upit je velik posao. Tko ga ispuni u subotu, ceka do ponedjeljka dok mu se netko javi.",
+  "tech_stack": ["WordPress", "HubSpot", "Contact Form 7", "HubSpot forms", "Google Tag Manager", "Google Analytics 4"],
+  "opener": "Berth, quick one. The request forms on your site feed HubSpot, but there is no chat and the office is 8 to 5 weekdays. What happens today to a One Stop Shop enquiry that lands on a Saturday morning?",
+  "video_beats": [
+    "0-10s: energywiseireland.ie na ekranu, Berthovo ime. Tvrdnja: One Stop Shop upit je vas najveci posao, a tko ga posalje u petak navecer ceka do ponedjeljka.",
+    "10-25s: pokazi kontakt stranicu s radnim vremenom 8-17 i Make a Request hub, pa da nema chata.",
+    "25-65s: pokazi rezultat workflowa. Upit stigne, homeowner odmah dobije email i SMS s pitanjima o kuci i BER-u, i link za termin konzultacije u kalendaru. Par sekundi canvas kao dokaz.",
+    "65-90s: CTA. Mogu ga spojiti na vas HubSpot za 48 sati da vidite kako izgleda s pravim upitima."
+  ],
+  "show_on_their_site": [
+    {"what": "Naslovna, pokazi da nema chata", "url": "https://www.energywiseireland.ie/"},
+    {"what": "Kontakt, radno vrijeme pon-pet 8-17", "url": "https://www.energywiseireland.ie/contact/"},
+    {"what": "Make a Request hub, pet odvojenih formulara", "url": "https://energywiseireland.ie/make-a-request/"},
+    {"what": "One Stop Shop stranica, najveci posao bez instant odgovora", "url": "https://energywiseireland.ie/seai-home-energy-upgrade/one-stop-shop/"}
+  ],
+  "website_demo": {
+    "why": "",
+    "current_site_problems": [],
+    "pages_to_build": [],
+    "ai_widget": "",
+    "inquiry_flow": "",
+    "seo_fixes": [],
+    "brand_risk": "agency_in_contract",
+    "demo_url": "",
+    "demo_status": "todo"
+  },
+  "workflows": [
+    {"id": "zmWzs6Eymm0BehhY", "why": "Upit s formulara se kvalificira i odmah dobije termin u kalendaru, sto je tocno ono sto fali izvan 8-17."},
+    {"id": "HN36JmjjBr9QiHwq", "why": "Chat agent koji zna SEAI grantove i One Stop Shop proces, jer to je prvo pitanje svakog homeownera."}
+  ],
+  "workflow_gap": {"what_to_show": "", "n8n_search": ""},
+  "language": "en",
+  "dm": "Berth, went through the Energywise site. Five request forms into HubSpot, office 8 to 5, no chat. Random message, I know. I recorded 90 seconds showing a One Stop Shop enquiry getting a reply and a booked consultation within minutes, weekend included. Made it just for you. [loom] Andrew",
+  "permission_dm": "",
+  "followup_viewed": "Berth, saw you watched it. If it is useful I can wire it to your HubSpot for a couple of weeks on real enquiries and you judge it on that. Worth a quick chat, or should I talk to Rosemarie?",
+  "followup_not_viewed": "Berth, bumping this in case LinkedIn buried it. 90 seconds on what happens to a One Stop Shop enquiry sent after 5pm. If it is not your area just say so and I will leave it.",
+  "avoid": [
+    "Ne nuditi redizajn stranice. Radila ju je agencija Speire, a digital vodi Rosemarie.",
+    "Ne govoriti da im je stranica losa.",
+    "Ne izmisljati koliko upita gube ni koliki je SEAI grant. Ako spominjes iznos granta, uzmi ga sa seai.ie i zapisi izvor.",
+    "Ne tvrditi da nitko ne odgovara na upite. Vidimo samo radno vrijeme i da nema chata."
+  ],
+  "sources": [
+    "https://www.linkedin.com/in/berth-sheehy-7a053740/",
+    "https://www.irishexaminer.com/business/economy/arid-41844948.html",
+    "https://buildingirelandmagazine.com/energywise-ireland-to-create-100-jobs-with-new-one-stop-shop/",
+    "https://www.energywiseireland.ie/",
+    "https://www.energywiseireland.ie/contact/",
+    "https://energywiseireland.ie/make-a-request/"
+  ]
+}

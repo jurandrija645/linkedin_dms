@@ -1,0 +1,91 @@
+{
+  "name": "Ryan Willdig",
+  "linkedin_url": "https://www.linkedin.com/in/ryan-willdig-0a4533307",
+  "role": "Vodi privatni (domestic) dio prodaje, u izvorima naveden kao Sales Director",
+  "company": "Heatforce",
+  "company_website": "https://heatforce.co.uk/",
+  "location": "Pontypridd i Cardiff, Wales, UK",
+  "vertical": "solar",
+  "identity_confidence": "high",
+  "identity_note": "Osoba i firma potvrdjene: Facebook video HeatforceWales izricito kaze Ryan Willdig from Heatforce, a LinkedIn pozicija iz CSV-a je Private Renewables sto odgovara privatnom dijelu njihove prodaje. Tocna titula nije potvrdjena iz prve ruke, jedan izvor kaze Sales Director. Ne oslovljavati ga titulom u videu, samo imenom.",
+  "tier": "A",
+  "tier_reason": "Vodi privatni dio prodaje u solar i heat pump firmi, znaci odgovara za to kako se postupa s dolaznim upitima. To je tocno ono sto nudimo.",
+  "asset_type": "n8n_loom",
+  "asset_reason": "Pravilo 5. Sajt je moderan, ima lokalne stranice, certifikate i 4.5 iz 535 recenzija. Nema sto redizajnirati. Propust je u operativi: jedini put do njih je Get in touch formular, a nigdje nema sto se dogodi nakon njega.",
+  "one_liner": "Sljedeci: Ryan Willdig. Vodi privatnu prodaju u Heatforceu, Pontypridd i Cardiff, solar i toplinske pumpe. Loom fokusiraj na speed to lead na Get in touch formularu, jedna ponuda, bez redizajna.",
+  "summary": [
+    "Heatforce radi solarne panele, zracne toplinske pumpe, EV punjace, zamjene bojlera i baterijsko skladistenje. Sjediste Riverside Buildings, Nile Road, Pontypridd.",
+    "Preko 60.000 kupaca, 4.5 iz 535 recenzija, Gas Safe, EPVS, HIES i Octopus Trusted Partner.",
+    "Ryan je lice firme prema javnosti, pojavljuje se u njihovim videima o tome zasto je sad pravo vrijeme za obnovljive."
+  ],
+  "observed_on_site": [
+    "Glavni i jedini CTA kroz cijeli sajt je Get in touch, koji vodi na kontakt stranicu i popup formular.",
+    "Nema live chata.",
+    "Nema online zakazivanja termina za procjenu.",
+    "Nema kalkulatora ustede ni instant procjene, iako prodaju solar PV i toplinske pumpe gdje je povrat prvo pitanje kupca.",
+    "Ocjena 4.5 iz 535 recenzija prikazana je na naslovnici.",
+    "Telefon 029 2076 3622. Radno vrijeme nije navedeno nigdje.",
+    "Postoje zasebne stranice po uslugama i lokalne stranice za instalacije diljem UK-a.",
+    "Blog postoji, ali datumi zadnjih objava nisu vidljivi s naslovnice.",
+    "U kodu je Google Ads konverzijski tag, znaci placaju oglase.",
+    "Imaju Microsoft Clarity, znaci netko gleda snimke sesija posjetitelja.",
+    "Nema nikakvog pracenja poziva, ni CallRail ni slicno."
+  ],
+  "offer": "Speed to lead na Get in touch formularu: upit dobije odgovor u minuti, sam se kvalificira i zavrsi kao bukiran termin za procjenu u kalendaru, s podsjetnikom da se termin i odrzi.",
+  "hook_type": "speed_to_lead",
+  "hook_line": "Netko ispuni Get in touch u devet navecer jer je bas gledao cijene struje. Ako mu se prvi javite sutra u deset, do tad je vec popunio formular kod dvoje drugih.",
+  "video_beats": [
+    "0-10s: heatforce.co.uk otvoren na ekranu, ime, i tvrdnja da je Get in touch jedini put do njih i da nigdje ne pise sto se dogodi poslije.",
+    "10-25s: ispuni njihov Get in touch formular na ekranu, pa pitanje sto se sad tocno dogodi i koliko dugo.",
+    "25-60s: rezultat workflowa. SMS i mail koji stignu u minuti, par pitanja koja kvalificiraju (tip objekta, racun za struju, orijentacija krova), pa termin koji sam sjedne u kalendar.",
+    "60-72s: podsjetnik dan prije termina, jer bukiran termin koji se ne odrzi nije posao.",
+    "72-90s: CTA, postavljanje u 48 sati i 30 dana na probu."
+  ],
+  "show_on_their_site": [
+    {
+      "what": "Naslovna, tu je Get in touch i ocjena 4.5 iz 535",
+      "url": "https://heatforce.co.uk/"
+    },
+    {
+      "what": "Stranica zracnih toplinskih pumpi, tu se vidi da nema kalkulatora ni procjene povrata",
+      "url": "https://www.heatforce.co.uk/renewables/air-source-heat-pumps/"
+    }
+  ],
+  "workflows": [
+    {
+      "id": "zmWzs6Eymm0BehhY",
+      "why": "Tocno pokriva put od web formulara do kvalificiranog i bukiranog termina, i to je cijela ponuda ovog videa."
+    },
+    {
+      "id": "EeDJ4upAU5cfjHTO",
+      "why": "Pokazuje kraj price, podsjetnik prije termina, jer kod procjena na terenu no show pojede dio bukiranih termina."
+    }
+  ],
+  "language": "en",
+  "dm": "Ryan, went through the Heatforce site. Get in touch is the only route in, and nothing on the page says what happens after someone sends it. Recorded 90 seconds showing a form submission answered in under a minute, qualified, and booked into a calendar. Random message, I know. Made it just for you. [loom]",
+  "followup_viewed": "Ryan, saw the video landed. Curious about one thing: when a Get in touch comes in at nine at night, who picks it up and how long does it sit? If the answer is next morning, that is the whole thing I was pointing at. Andrew",
+  "followup_not_viewed": "Ryan, one more go in case LinkedIn swallowed this. Short video, 90 seconds, on what happens to a Get in touch form after hours. If it is not your area or not a fit, say the word and I will leave it. Andrew",
+  "avoid": [
+    "Ne govoriti da im je sajt los ili zastario. Moderan je, ima lokalne stranice i certifikate.",
+    "Ne nuditi redizajn stranice, propust nije tamo.",
+    "Ne oslovljavati ga titulom, tocna titula nije potvrdjena.",
+    "Ne izmisljati koliko leadova gube ni koliko brzo konkurencija odgovara. Nemamo taj podatak i benchmark bez izvora se ne koristi.",
+    "Ne objasnjavati mu kako rade toplinske pumpe, firma je 40 godina u tome."
+  ],
+  "sources": [
+    "https://heatforce.co.uk/",
+    "https://www.heatforce.co.uk/renewables/air-source-heat-pumps/",
+    "https://www.facebook.com/HeatforceWales/videos/1269407664090847/",
+    "https://heatforce.wheree.com/"
+  ],
+  "tech_stack": [
+    "WordPress",
+    "tema hello-elementor-child",
+    "Elementor",
+    "Google Analytics 4",
+    "Google Ads konverzije",
+    "Microsoft Clarity",
+    "Yoast SEO"
+  ],
+  "opener": "Ryan, quick one. You are running Google Ads and you have Clarity recording sessions, but there is no call tracking anywhere on the site. Do you know which ads are actually producing the phone calls?"
+}

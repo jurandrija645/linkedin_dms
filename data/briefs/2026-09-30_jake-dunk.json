@@ -1,0 +1,40 @@
+{
+  "name": "Jake Dunk",
+  "linkedin_url": "https://www.linkedin.com/in/jake-dunk-048b17138",
+  "role": "Profit Center Manager (voditelj poslovnice)",
+  "company": "UK Greentech Portsmouth",
+  "company_website": "https://www.ukgreentech.com/",
+  "location": "Fareham, Hampshire, UK",
+  "vertical": "solar",
+  "identity_confidence": "high",
+  "identity_note": "LinkedIn i njegov post o UK Greentechu potvrdjuju ulogu. UK Greentech je distributer solarne i renewables opreme i divizija Edmundson Electricala.",
+  "tier": "SKIP",
+  "tier_reason": "Voditelj poslovnice korporativnog veleprodajnog distributera koji prodaje instalaterima, nema homeowner upita i ne odlucuje o alatima ni stranici.",
+  "asset_type": "none",
+  "asset_reason": "Pravilo 1, tier SKIP.",
+  "one_liner": "Preskoceno: Jake Dunk vodi poslovnicu UK Greentecha, distributera opreme u sklopu Edmundson Electricala. Nije nas kupac.",
+  "summary": [
+    "UK Greentech je distributer solar, baterija i heat pump opreme za instalatere, divizija Edmundson Electricala.",
+    "Jake vodi poslovnicu u Portsmouthu kao profit center manager."
+  ],
+  "observed_on_site": [],
+  "offer": "",
+  "hook_type": "other",
+  "hook_line": "",
+  "tech_stack": [],
+  "opener": "",
+  "video_beats": [],
+  "show_on_their_site": [],
+  "workflows": [],
+  "language": "en",
+  "dm": "",
+  "permission_dm": "",
+  "followup_viewed": "",
+  "followup_not_viewed": "",
+  "avoid": ["Ako se ikad javi, jedina smislena prica je partnerstvo preko instalatera kojima prodaje, ne prodaja njemu."],
+  "sources": [
+    "https://uk.linkedin.com/in/jake-dunk-048b17138",
+    "https://www.ukgreentech.com/",
+    "https://uk.linkedin.com/company/uk-greentech"
+  ]
+}

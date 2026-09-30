@@ -1,0 +1,622 @@
+{
+  "name": "Appointment Reminder Sender",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "id": "d05dd316-beed-4e19-8fa7-615a24939fd5",
+      "name": "Every Morning at 9",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        1040,
+        336
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "12lsTQ_B6G_39C0JwXZB_N-9Gk0STtrvZQ9bMAyX7ELo",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12lsTQ_B6G_39C0JwXZB_N-9Gk0STtrvZQ9bMAyX7ELo/edit?usp=drivesdk",
+          "cachedResultName": "New Form_fashinbrand"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12lsTQ_B6G_39C0JwXZB_N-9Gk0STtrvZQ9bMAyX7ELo/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "options": {}
+      },
+      "id": "62638179-1fc9-44e8-992e-4966f1fc93dd",
+      "name": "Get Appointments",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1328,
+        336
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "jsCode": "const tomorrow = new Date();\ntomorrow.setDate(tomorrow.getDate() + 1);\nconst target = tomorrow.toISOString().slice(0, 10);\nreturn $input.all().filter(i => String(i.json['Date']).slice(0, 10) === target);"
+      },
+      "id": "8ed42eba-041c-4109-a200-672f5e25a26a",
+      "name": "Filter For Tomorrow",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1584,
+        336
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "jsCode": "return $input.all().filter(i => String(i.json['Status'] || '').toLowerCase() !== 'cancelled');"
+      },
+      "id": "59917b77-d585-40ed-aeab-87ffb95df449",
+      "name": "Filter Out Cancelled",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1840,
+        336
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "e1",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{$json['Email']}}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3a60837e-0197-4b1b-b98f-2e10769def86",
+      "name": "Has Valid Email",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        2096,
+        336
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f1",
+              "name": "issue",
+              "type": "string",
+              "value": "Missing email — call patient directly"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fa4ca755-6056-430e-bd7f-ff79e9437398",
+      "name": "Flag Missing Contact Info",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2368,
+        384
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "C0B1SAX5L3W",
+          "cachedResultName": "new_ai-updates"
+        },
+        "text": "No email on file for {{$json['Patient']}}'s appointment on {{$json['Date']}} at {{$json['Time']}}. Please call to confirm.",
+        "otherOptions": {}
+      },
+      "id": "ea2bf254-28f8-43c7-96e9-f357bda8c2aa",
+      "name": "Alert Front Desk Missing Info",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        2624,
+        384
+      ],
+      "webhookId": "b0063406-1ad4-442b-b8d7-bbe7a6ae6913",
+      "typeVersion": 2.3
+    },
+    {
+      "parameters": {
+        "sendTo": "={{$json['Email']}}",
+        "subject": "Appointment reminder for {{$json['Date']}}",
+        "message": "Hi {{$json['Patient']}}, this is a reminder of your appointment on {{$json['Date']}} at {{$json['Time']}}. Please reply if you need to reschedule.",
+        "options": {}
+      },
+      "id": "8c1c2459-e71b-4f4d-a93d-9e0dc3f9abb7",
+      "name": "Send Reminder Email",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        2352,
+        192
+      ],
+      "webhookId": "07b01893-2bd4-4f69-aa6c-7ccbe961abba",
+      "typeVersion": 2.1
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "12lsTQ_B6G_39C0JwXZB_N-9Gk0STtrvZQ9bMAyX7ELo",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12lsTQ_B6G_39C0JwXZB_N-9Gk0STtrvZQ9bMAyX7ELo/edit?usp=drivesdk",
+          "cachedResultName": "New Form_fashinbrand"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12lsTQ_B6G_39C0JwXZB_N-9Gk0STtrvZQ9bMAyX7ELo/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "columns": {
+          "value": {
+            "Email": "={{ $json['Email'] }}",
+            "Status": "Reminded"
+          },
+          "schema": [
+            {
+              "id": "Email",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "Email",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "Status",
+              "defaultMatch": false,
+              "canBeUsedToMatch": false
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "Email"
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "84cf5ec1-ec5c-4fe2-ad63-0feb2215a899",
+      "name": "Mark As Reminded",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        2608,
+        192
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "jsCode": "const count = $input.all().length;\nreturn [{ json: { count, date: new Date(Date.now() + 86400000).toISOString().slice(0,10) } }];"
+      },
+      "id": "1c5627df-0905-4a09-807e-74f5fc882e61",
+      "name": "Build Summary",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        2208,
+        1072
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "C0B1SAX5L3W",
+          "cachedResultName": "new_ai-updates"
+        },
+        "text": "Reminders sent for {{$json.count}} appointments scheduled on {{$json.date}}.",
+        "otherOptions": {}
+      },
+      "id": "8907a866-84c7-4325-aef0-e6d35ccc462e",
+      "name": "Front Desk Summary",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        2464,
+        1072
+      ],
+      "webhookId": "1ed3a439-015e-44c5-b66f-b88951956504",
+      "typeVersion": 2.3
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 30
+            }
+          ]
+        }
+      },
+      "id": "2f132fe0-c3ab-4b19-8ecd-14070a869f9a",
+      "name": "Two Hour Reminder Check",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        1040,
+        1136
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "12lsTQ_B6G_39C0JwXZB_N-9Gk0STtrvZQ9bMAyX7ELo",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12lsTQ_B6G_39C0JwXZB_N-9Gk0STtrvZQ9bMAyX7ELo/edit?usp=drivesdk",
+          "cachedResultName": "New Form_fashinbrand"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12lsTQ_B6G_39C0JwXZB_N-9Gk0STtrvZQ9bMAyX7ELo/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "options": {}
+      },
+      "id": "908fcd17-5967-4418-a4c1-4a9281aa8b5a",
+      "name": "Get Today Appointments",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1328,
+        1136
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "jsCode": "const now = new Date();\nconst today = now.toISOString().slice(0, 10);\nreturn $input.all().filter(i => {\n  const status = String(i.json['Status'] || '').toLowerCase();\n  if (status === 'cancelled') return false;\n  if (String(i.json['Date']).slice(0, 10) !== today) return false;\n  const apptTime = new Date(`${today}T${String(i.json['Time']).padStart(5, '0')}:00`);\n  const diffMins = (apptTime.getTime() - now.getTime()) / 60000;\n  return diffMins > 0 && diffMins <= 120;\n});"
+      },
+      "id": "8bde178c-d0dc-4ca8-8eca-7d8e744f8d21",
+      "name": "Filter Next Two Hours",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1584,
+        1136
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "sendTo": "={{$json['Email']}}",
+        "subject": "Your appointment starts soon",
+        "message": "Hi {{$json['Patient']}}, your appointment starts soon today at {{$json['Time']}}. We look forward to seeing you.",
+        "options": {}
+      },
+      "id": "a31787b6-4193-476f-84aa-0168c9717c1a",
+      "name": "Send Final Reminder",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        1840,
+        1136
+      ],
+      "webhookId": "94370e2d-98c4-462a-a29a-a7e97bcd9059",
+      "typeVersion": 2.1
+    },
+    {
+      "parameters": {},
+      "id": "a84c8876-edc1-474b-abe2-127cc38d9797",
+      "name": "Workflow Error Trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "position": [
+        2192,
+        1328
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "C0B1SAX5L3W",
+          "cachedResultName": "new_ai-updates"
+        },
+        "text": "Appointment Reminder Sender workflow failed: {{$json.execution.error.message}}",
+        "otherOptions": {}
+      },
+      "id": "4c0b2b42-67c8-4372-be4d-b3ac772dc7d5",
+      "name": "Alert Front Desk on Workflow Failure",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        2480,
+        1328
+      ],
+      "webhookId": "e0df771f-70aa-4c42-8fac-24d73122e310",
+      "typeVersion": 2.3
+    },
+    {
+      "parameters": {
+        "content": "## 🩺 Appointment Reminder Sender\n\nEvery morning it reads your appointment sheet, finds tomorrow's bookings, skips cancellations, emails each patient a reminder, flags anyone missing contact info for a phone call instead, and posts a summary to your front desk channel. A second check throughout the day sends a final reminder two hours before same-day appointments, and a Slack alert fires if anything in the workflow fails.\n\n**Perfect for:** clinics, dental practices and small healthcare offices.\n\n---\n\n## How it works\n\n1. **Every Morning at 9** — schedule trigger that runs once daily.\n2. **Get Appointments** — reads all rows from your appointments sheet.\n3. **Filter For Tomorrow** — keeps only appointments dated for the next day.\n4. **Filter Out Cancelled** — drops any appointment marked Cancelled.\n5. **Has Valid Email** — branches on whether the patient has an email on file.\n6. **Send Reminder Email** / **Mark As Reminded** — *(has email)* emails the reminder, then marks the row as reminded so a retry never double-sends.\n7. **Flag Missing Contact Info** / **Alert Front Desk Missing Info** — *(no email)* tells front desk to call this patient instead.\n8. **Build Summary** / **Front Desk Summary** — counts how many reminders went out and posts the total to your team channel.\n9. **Two Hour Reminder Check** — *(second touchpoint)* runs every 30 minutes through the day.\n10. **Get Today Appointments** / **Filter Next Two Hours** — finds today's appointments starting within the next two hours.\n11. **Send Final Reminder** — *(optional path)* sends a same-day, starting-soon reminder.\n12. **Workflow Error Trigger** / **Alert Front Desk on Workflow Failure** — *(error path)* posts to Slack if any step in this workflow throws an error.\n\n---\n\n## Setup (~15 min)\n\n1. **Google Sheets** — connect your account and sheet id in *Get Appointments*, *Mark As Reminded*, and *Get Today Appointments*. Use columns Patient, Email, Date, Time, and add a Status column for Cancelled/Reminded.\n2. **Gmail** — connect Gmail in *Send Reminder Email* and *Send Final Reminder* and adjust the wording.\n3. **Slack** — connect Slack and set the channel in *Front Desk Summary*, *Alert Front Desk Missing Info*, and *Alert Front Desk on Workflow Failure*.\n> Make sure your Date column uses a format the *Filter For Tomorrow* code can read, such as YYYY-MM-DD, and Time uses 24-hour HH:MM.",
+        "height": 1192,
+        "width": 580,
+        "color": 7
+      },
+      "id": "fec35caf-344b-4d08-bfa4-499b64166220",
+      "name": "Overview",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        240,
+        -64
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## 1️⃣ Daily Fetch\n\n**Every Morning at 9** triggers the run, **Get Appointments** pulls the full appointment list from your sheet, **Filter For Tomorrow** narrows it to next day bookings, and **Filter Out Cancelled** drops anything marked Cancelled.",
+        "height": 400,
+        "width": 1040,
+        "color": 5
+      },
+      "id": "9e61c659-3ae2-44cd-ac17-0f2a9f4f38aa",
+      "name": "1️⃣ Daily Fetch",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        960,
+        176
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## 2️⃣ Reminders & Exceptions\n\n**Has Valid Email** checks each appointment for contact info. **Send Reminder Email** and **Mark As Reminded** handle the normal case, while **Flag Missing Contact Info** and **Alert Front Desk Missing Info** make sure anyone without an email still gets a human follow-up instead of being silently skipped.",
+        "height": 816,
+        "width": 880,
+        "color": 3
+      },
+      "id": "46c3a61c-6735-4e58-b680-19660969a48c",
+      "name": "2️⃣ Reminders & Exceptions",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2032,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## 3️⃣ Same-Day Reminder\n\n**Two Hour Reminder Check** runs throughout the day, **Get Today Appointments** and **Filter Next Two Hours** find bookings starting soon, and **Send Final Reminder** gives patients a last-minute nudge.",
+        "height": 496,
+        "width": 1056,
+        "color": 6
+      },
+      "id": "ecaadc9d-6385-46fc-8d28-6c4c00b597b9",
+      "name": "3️⃣ Same-Day Reminder",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        960,
+        960
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## 4️⃣ Summary & Error Handling\n\n**Build Summary** counts how many appointments were processed and **Front Desk Summary** posts the total to your staff channel. **Workflow Error Trigger** and **Alert Front Desk on Workflow Failure** catch and surface any failure in this workflow.",
+        "height": 664,
+        "width": 880,
+        "color": 4
+      },
+      "id": "90af7276-ddeb-45f4-a72a-bd1ab205dc0a",
+      "name": "4️⃣ Summary & Error Handling",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2144,
+        832
+      ],
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Build Summary": {
+      "main": [
+        [
+          {
+            "node": "Front Desk Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Valid Email": {
+      "main": [
+        [
+          {
+            "node": "Send Reminder Email",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Flag Missing Contact Info",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Appointments": {
+      "main": [
+        [
+          {
+            "node": "Filter For Tomorrow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Every Morning at 9": {
+      "main": [
+        [
+          {
+            "node": "Get Appointments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter For Tomorrow": {
+      "main": [
+        [
+          {
+            "node": "Filter Out Cancelled",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Reminder Email": {
+      "main": [
+        [
+          {
+            "node": "Mark As Reminded",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Out Cancelled": {
+      "main": [
+        [
+          {
+            "node": "Has Valid Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Build Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Next Two Hours": {
+      "main": [
+        [
+          {
+            "node": "Send Final Reminder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Today Appointments": {
+      "main": [
+        [
+          {
+            "node": "Filter Next Two Hours",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Workflow Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Alert Front Desk on Workflow Failure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Two Hour Reminder Check": {
+      "main": [
+        [
+          {
+            "node": "Get Today Appointments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Flag Missing Contact Info": {
+      "main": [
+        [
+          {
+            "node": "Alert Front Desk Missing Info",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "341ec7fc-b912-49bb-a009-97113adb0627",
+  "meta": {
+    "instanceId": "0f816eca152a33f384c3e3264b8e1f84a976f134689685a56c827c8aaefd38ff"
+  },
+  "id": "EeDJ4upAU5cfjHTO",
+  "tags": []
+}

@@ -1,0 +1,628 @@
+{
+  "name": "Zoho CRM – Smart Follow-up Sequence Optimizer",
+  "nodes": [
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "hour": 9
+            }
+          ]
+        }
+      },
+      "id": "1102f111-d96c-4e04-b062-5c2c6a5d675a",
+      "name": "Daily Follow-up Scan Trigger",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        704,
+        544
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c70f6b30-1700-4a4d-99c0-e2f7856db82d",
+              "name": "cutoffDate",
+              "type": "string",
+              "value": "={{ new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)\n   .toISOString()\n   .slice(0,19) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b8a7e2c0-1952-4dfe-b69d-4c433d451b82",
+      "name": "Set Inactivity Cutoff Window",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        976,
+        544
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "operation": "getAll",
+        "returnAll": true,
+        "options": {}
+      },
+      "id": "94b64228-467f-4985-a590-4449795a31d8",
+      "name": "Fetch Active Deals from Zoho CRM",
+      "type": "n8n-nodes-base.zohoCrm",
+      "position": [
+        1280,
+        544
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const d = $input.item.json;\nconst now = new Date();\n\nif (!d.Auto_Follow_up_Enabled) return { json: { due: false } };\nif (d.Follow_up_Status !== 'Pending') return { json: { due: false } };\nif (!d.Next_Follow_up_Due) return { json: { due: false } };\n\nconst dueDate = new Date(d.Next_Follow_up_Due);\n\nreturn {\n  json: {\n    due: dueDate <= now,\n    dealId: d.id,\n    dealName: d.Deal_Name,\n    raw: d\n  }\n};\n"
+      },
+      "id": "4963764d-25d4-482b-a75d-4fcda46c900d",
+      "name": "Evaluate Follow-up Eligibility",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1584,
+        544
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "35eb963a-29f4-40cb-8ca1-1ae2543927e1",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              },
+              "leftValue": "={{$json.due}}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5e8b4719-7d38-4b11-a193-af71944819ca",
+      "name": "Is Follow-up Due?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1840,
+        544
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a CRM assistant.\n\nGenerate a personalized follow-up message for this deal.\n\nDeal Name: {{ $json.dealName }}\nAccount: {{ $json.raw.Account_Name.name }}\nStage: {{ $json.raw.Stage }}\nLast Follow-up: {{ $json.raw.Last_Follow_up_At }}\n\nReturn ONLY valid JSON in the following format:\n\n{\n  \"subject\": \"...\",\n  \"message\": \"...\",\n  \"channel\": \"email\",\n  \"priority\": \"High\",\n  \"next_action\": \"send_followup\"\n}\nReturn ONLY valid JSON.Do not add explanations.\nDo not add markdown.",
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a CRM follow-up assistant. Generate short, professional follow-up content. No emojis. No fluff. Business tone."
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "id": "c0fdbf99-7139-492b-93c3-faab8a5b1032",
+      "name": "Generate Personalized Follow-up (AI)",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "position": [
+        2112,
+        528
+      ],
+      "typeVersion": 1.7
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "3b22c6dd-f685-4d5e-ba1d-a87761e3616e",
+      "name": "AI Model (Gemini)",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "position": [
+        2000,
+        816
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"subject\": \"...\",\n  \"message\": \"...\",\n  \"channel\": \"email\",\n  \"priority\": \"High\",\n  \"next_action\": \"send_followup\"\n}"
+      },
+      "id": "a5447644-eccb-4ed1-a797-1b381a0941e3",
+      "name": "Parse AI Response (Structured JSON)",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "position": [
+        2352,
+        832
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// ----------------------------\n// INPUT DATA\n// ----------------------------\nconst deal = $('Is Follow-up Due?').item.json.raw;\nconst ai = $json.output || {};\n\n// ----------------------------\n// SAFE DATE RESOLUTION\n// ----------------------------\nconst lastActivityTime =\n  deal.Last_Activity_Time ||\n  deal.Last_Follow_up_At ||\n  deal.Created_Time ||\n  null;\n\nlet daysSinceLastActivity = null;\n\nif (lastActivityTime) {\n  const lastActivity = new Date(lastActivityTime);\n  daysSinceLastActivity = Math.floor(\n    (Date.now() - lastActivity.getTime()) / (1000 * 60 * 60 * 24)\n  );\n}\n\n// ----------------------------\n// FOLLOW-UP CHANNEL LOGIC\n// ----------------------------\n// Default from AI\nlet followUpType = ai.channel || \"email\";\n\n// Hard override based on inactivity\nif (daysSinceLastActivity !== null) {\n  if (daysSinceLastActivity > 14) {\n    followUpType = \"call\";\n  } else if (daysSinceLastActivity > 7) {\n    followUpType = \"whatsapp\";\n  }\n}\n\n// ----------------------------\n// FINAL OUTPUT\n// ----------------------------\nreturn {\n  ...$json,\n\n  followUpDecision: {\n    lastActivityTime,\n    followUpType,\n    daysSinceLastActivity,\n    aiSuggestedChannel: ai.channel || null,\n    priority: ai.priority || \"Normal\",\n    nextAction: ai.next_action || null,\n  }\n};\n"
+      },
+      "id": "f25ba429-c47a-4e8d-82ea-5295927f814c",
+      "name": "Decision Engine",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        2512,
+        528
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "loose"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "40039f9a-416b-4454-b096-781b1fe5851c",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $json.followUpDecision.followUpType }}",
+                    "rightValue": "email"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "Email"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "loose"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "0f314f51-a705-411a-87f4-f9d6c2e70e71",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $json.followUpDecision.followUpType }}",
+                    "rightValue": "slack"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "slack"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "loose"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "40c58835-3665-4dd2-a367-787c4b7f3165",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $json.followUpDecision.followUpType }}",
+                    "rightValue": "whatsapp"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "Whatsapp"
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "id": "8daccc25-c3da-450b-96f5-dd723f4b01ca",
+      "name": "Channel Routing",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        2752,
+        512
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "sendTo": "=",
+        "subject": "={{ $json.output.subject }}",
+        "message": "={{ $json.output.message }}",
+        "options": {}
+      },
+      "id": "e43c5056-9c52-41ae-8769-b5c1666e8829",
+      "name": "Send follow-up email",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        3104,
+        304
+      ],
+      "webhookId": "7bea4c7e-9a9a-47c8-a934-e4693ebc743e",
+      "typeVersion": 2.1
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "user",
+        "user": {
+          "__rl": true,
+          "mode": "id",
+          "value": "{userid}"
+        },
+        "text": "={{ $json.output.message }}",
+        "otherOptions": {}
+      },
+      "id": "84cb6bf2-9173-44a8-b71a-e3ea5b7c86f6",
+      "name": "Send Slack follow-up",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        3120,
+        528
+      ],
+      "webhookId": "51b6ac55-2eca-411b-b321-353dfb0d221d",
+      "typeVersion": 2.3
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "textBody": "={{ $json.output.message }}",
+        "additionalFields": {}
+      },
+      "id": "be1d09a1-2c6b-4749-8597-5c4b70e109f5",
+      "name": "Send WhatsApp Follow-up",
+      "type": "n8n-nodes-base.whatsApp",
+      "position": [
+        3120,
+        752
+      ],
+      "webhookId": "dfecf2f8-3802-46e5-b7ad-ef3f56a248a0",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.zohoapis.com/crm/v2/Tasks",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "zohoOAuth2Api",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"data\": [\n    {\n      \"Subject\": \"Follow-up: {{ $('Is Follow-up Due?').item.json.dealName }}\",\n      \"Due_Date\": \"{{ new Date().toISOString().split('T')[0] }}\",\n      \"Status\": \"Not Started\",\n      \"Priority\": \"High\",\n      \"What_Id\": \"{{ $('Is Follow-up Due?').item.json.dealId }}\",\n      \"$se_module\": \"Deals\",\n      \"Owner\": {\n        \"id\": \"{{ $('Is Follow-up Due?').item.json.raw.Owner.id }}\"\n      },\n      \"Description\": \"Auto-generated follow-up task for overdue deal.\"\n    }\n  ]\n}\n",
+        "options": {}
+      },
+      "id": "93c08e94-db6b-4425-869b-fd04ff9df53f",
+      "name": "Create CRM Follow-up Task",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3504,
+        528
+      ],
+      "typeVersion": 4.3
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "operation": "update",
+        "dealId": "={{ $('Is Follow-up Due?').item.json.dealId }}",
+        "updateFields": {
+          "customFields": {
+            "customFields": [
+              {
+                "fieldId": "Follow_up_Status",
+                "value": "Sent"
+              }
+            ]
+          }
+        }
+      },
+      "id": "9b253916-87f0-4243-be26-64cf9e82cf25",
+      "name": "Update Deal Follow-up Status",
+      "type": "n8n-nodes-base.zohoCrm",
+      "position": [
+        3776,
+        528
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Zoho CRM – Smart Follow-up Sequence Optinizer\n**How it works** \nThis workflow runs weekly and Automatically detect inactive deals and trigger intelligent, AI-driven follow-ups across multiple channels to improve deal conversion and prevent pipeline leakage.\n\n**Setup steps**\n1. Configure Zoho CRM credentials in all Zoho nodes (OAuth2 recommended).\n\n2. Verify Deal Fields Mapping, Add Custom fields in Zoho Deal : Last Activity Time, Last Follow-up Date, Created Date\n\n3. Configure AI Node (OpenAI/Gemini)\n\n4. Validate Function Node logic: correctly calculates daysSinceLastActivity\n\n5. Set up Switch Node conditions : Email, WhatsApp,Slack or Call \n\n6. Configure Email, WhatsApp, Slack or Call credentials.\n\n7. Configure Zoho CRM Task Node",
+        "height": 528,
+        "width": 560
+      },
+      "id": "4415a67f-8fe5-45c6-b460-f0e0e1dd2e54",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Deal Data Collection\nTriggers the workflow on schedule and fetches active Deals from Zoo CRM for processing.",
+        "height": 384,
+        "width": 544,
+        "color": 7
+      },
+      "id": "9f444740-92fb-4bd4-be38-ad0863f5a757",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        656,
+        384
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Deal Processing & Inactivity Detection\nSplits deals, calculates inactivity and filters only stalled deals that need follow-up.",
+        "height": 384,
+        "width": 720,
+        "color": 7
+      },
+      "id": "a9b5fec6-5096-44fb-bbfc-38cadcede947",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1232,
+        384
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## AI Evaluation & Follow-Up Decision\nSplits deals, calculates inactivity and filters only stalled deals that need follow-up.",
+        "height": 384,
+        "width": 624,
+        "color": 7
+      },
+      "id": "efdc0a70-f639-4bb5-b48b-24fb09fa83ee",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2016,
+        384
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Channel Routing & CRM Actions\nRoutes deals to Email/WhatsApp/Call and creates alerts & CRM tasks for action.",
+        "height": 768,
+        "width": 1296,
+        "color": 7
+      },
+      "id": "c4cd72e5-e2b0-426a-b442-274f2dd0db8e",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2688,
+        160
+      ],
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Channel Routing": {
+      "main": [
+        [
+          {
+            "node": "Send follow-up email",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Slack follow-up",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send WhatsApp Follow-up",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Decision Engine": {
+      "main": [
+        [
+          {
+            "node": "Channel Routing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Model (Gemini)": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Generate Personalized Follow-up (AI)",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Follow-up Due?": {
+      "main": [
+        [
+          {
+            "node": "Generate Personalized Follow-up (AI)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Slack follow-up": {
+      "main": [
+        [
+          {
+            "node": "Create CRM Follow-up Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send follow-up email": {
+      "main": [
+        [
+          {
+            "node": "Create CRM Follow-up Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send WhatsApp Follow-up": {
+      "main": [
+        [
+          {
+            "node": "Create CRM Follow-up Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create CRM Follow-up Task": {
+      "main": [
+        [
+          {
+            "node": "Update Deal Follow-up Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Daily Follow-up Scan Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set Inactivity Cutoff Window",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Inactivity Cutoff Window": {
+      "main": [
+        [
+          {
+            "node": "Fetch Active Deals from Zoho CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Evaluate Follow-up Eligibility": {
+      "main": [
+        [
+          {
+            "node": "Is Follow-up Due?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Active Deals from Zoho CRM": {
+      "main": [
+        [
+          {
+            "node": "Evaluate Follow-up Eligibility",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse AI Response (Structured JSON)": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Generate Personalized Follow-up (AI)",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Personalized Follow-up (AI)": {
+      "main": [
+        [
+          {
+            "node": "Decision Engine",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "f7924f09-24cd-4be3-bb58-42f493d02c11",
+  "meta": {
+    "instanceId": "0f816eca152a33f384c3e3264b8e1f84a976f134689685a56c827c8aaefd38ff"
+  },
+  "id": "hzvVNEOARumCObbr",
+  "tags": []
+}

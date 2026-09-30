@@ -1,0 +1,25 @@
+{
+  "name": "mindaptive-loom-outreach",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "schema": "tsx scripts/apply-schema.ts",
+    "import": "tsx scripts/import-connections.ts",
+    "catalog": "tsx scripts/build-catalog.ts",
+    "next": "tsx scripts/list-next.ts",
+    "stats": "tsx scripts/stats.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "csv-parse": "^5.5.6",
+    "dotenv": "^16.4.5",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}

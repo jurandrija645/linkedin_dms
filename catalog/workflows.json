@@ -1,0 +1,140 @@
+[
+  {
+    "id": "vfj6KAlf5ubUcIPA",
+    "name": "🤖 On-Page SEO Audit",
+    "n8n_url": "",
+    "what_it_does": "",
+    "trigger": "web formular",
+    "integrations": [
+      "agent",
+      "form",
+      "gmail",
+      "httpRequest",
+      "lmChatOpenAi",
+      "markdown"
+    ],
+    "best_for_verticals": [],
+    "demo_tip": ""
+  },
+  {
+    "id": "7EOcE34rqe8kF95v",
+    "name": "AI-Powered WhatsApp Chatbot for Text, Voice, Images & PDFs",
+    "n8n_url": "",
+    "what_it_does": "",
+    "trigger": "whatsapp",
+    "integrations": [
+      "agent",
+      "httpRequest",
+      "lmChatOpenAi",
+      "memoryBufferWindow",
+      "openAi",
+      "whatsApp"
+    ],
+    "best_for_verticals": [],
+    "demo_tip": ""
+  },
+  {
+    "id": "EeDJ4upAU5cfjHTO",
+    "name": "Appointment Reminder Sender",
+    "n8n_url": "",
+    "what_it_does": "",
+    "trigger": "raspored",
+    "integrations": [
+      "error",
+      "gmail",
+      "googleSheets",
+      "schedule",
+      "slack"
+    ],
+    "best_for_verticals": [],
+    "demo_tip": ""
+  },
+  {
+    "id": "zmWzs6Eymm0BehhY",
+    "name": "Lead intake, qualification and follow-up system",
+    "n8n_url": "",
+    "what_it_does": "",
+    "trigger": "webhook",
+    "integrations": [
+      "airtable",
+      "googleCalendar",
+      "httpRequest",
+      "openAi",
+      "sendGrid",
+      "webhook"
+    ],
+    "best_for_verticals": [],
+    "demo_tip": ""
+  },
+  {
+    "id": "38nWu3SXo9vp43R8",
+    "name": "SparkSender LinkedIn Scrape - B2B Tech & Consulting",
+    "n8n_url": "",
+    "what_it_does": "",
+    "trigger": "manual",
+    "integrations": [
+      "form",
+      "googleSheets",
+      "httpRequest",
+      "openAi",
+      "perplexity",
+      "slack"
+    ],
+    "best_for_verticals": [],
+    "demo_tip": ""
+  },
+  {
+    "id": "v0ROCZp3Rj4UogWj",
+    "name": "The Recap AI - Secretary Voice Agent",
+    "n8n_url": "",
+    "what_it_does": "",
+    "trigger": "webhook",
+    "integrations": [
+      "agent",
+      "googleCalendarTool",
+      "googleSheetsTool",
+      "lmChatGoogleGemini",
+      "memoryBufferWindow",
+      "toolThink",
+      "webhook"
+    ],
+    "best_for_verticals": [],
+    "demo_tip": ""
+  },
+  {
+    "id": "HN36JmjjBr9QiHwq",
+    "name": "Website Chatbot Agent",
+    "n8n_url": "",
+    "what_it_does": "",
+    "trigger": "chat",
+    "integrations": [
+      "agent",
+      "chat",
+      "lmChatOpenAi",
+      "memoryBufferWindow",
+      "toolWorkflow"
+    ],
+    "best_for_verticals": [],
+    "demo_tip": ""
+  },
+  {
+    "id": "hzvVNEOARumCObbr",
+    "name": "Zoho CRM – Smart Follow-up Sequence Optimizer",
+    "n8n_url": "",
+    "what_it_does": "",
+    "trigger": "ručno",
+    "integrations": [
+      "chainLlm",
+      "cron",
+      "gmail",
+      "httpRequest",
+      "lmChatGoogleGemini",
+      "outputParserStructured",
+      "slack",
+      "whatsApp",
+      "zohoCrm"
+    ],
+    "best_for_verticals": [],
+    "demo_tip": ""
+  }
+]

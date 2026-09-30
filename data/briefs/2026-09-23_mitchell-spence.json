@@ -1,0 +1,97 @@
+{
+  "name": "Mitchell Spence",
+  "linkedin_url": "https://www.linkedin.com/in/mitchell-spence-887739b1",
+  "role": "Vlasnik, general contractor i restoration izvodjac",
+  "company": "Lakeside Restoration",
+  "company_website": "https://lakeside-restoration.com/",
+  "location": "Minnesota, sjediste u podrucju Maple Grovea",
+  "vertical": "home_services",
+  "identity_confidence": "high",
+  "identity_note": "Na njihovoj About stranici pise da Mitch Spence posjeduje i vodi firmu, uz licencu BC808760 i telefon 651-508-1703, a RocketReach ga navodi kao vlasnika Lakeside Restoration LLC s lokacijom Maple Grove, Minnesota. PAZI: postoji i potpuno druga firma Lakeside Restoration LLC u Floridi, Groveland i Clearwater, s vlastitim BBB profilom i domenom lakeside247.com. To NIJE on. U videu i poruci koristi iskljucivo lakeside-restoration.com i Minnesotu.",
+  "tier": "A",
+  "tier_reason": "Vlasnik je i sam vodi firmu. Vrte placene oglase i obecavaju hitnu reakciju, a stranica nema nijedan nacin da uhvati covjeka koji ne zeli zvati.",
+  "asset_type": "n8n_loom",
+  "asset_reason": "Pravilo 6. Stranica im je na Webflowu, moderna i dovoljno dobra da je ne diramo, sto je Andrija i potvrdio pogledavsi je. Propust nije u izgledu nego u operativi: nocu i vikendom nema nicega osim telefona, a vrte placene oglase.",
+  "one_liner": "Sljedeci: Mitchell Spence. Vlasnik Lakeside Restorationa u Minnesoti, sanacija stete. Stranica mu je dobra, ne diraj je. Loom fokusiraj na to sto se dogodi s pozivom u dva ujutro.",
+  "summary": [
+    "Sanacija stete od vode, pozara, dima i oluje, plus uklanjanje plijesni, biohazard ciscenje i rekonstrukcija. Stambeno i poslovno, sve pod jednim krovom.",
+    "Mitch je general contractor s preko 12 godina iskustva i preko 2000 projekata, licenca BC808760.",
+    "Vrte Meta oglase, pixel im je u kodu, i imaju Calendly. Znaci netko vec placa da ljudi dodju na stranicu."
+  ],
+  "observed_on_site": [
+    "Stranica je na Webflowu, dizajn je moderan, gradijenti i uredne kartice usluga.",
+    "Poruka kroz cijelu stranicu je da svaka sekunda broji i da su dostupni 24/7.",
+    "Nema live chata nigdje.",
+    "Glavni CTA je Request an Inspection i telefon 651-508-1703.",
+    "Calendly je u kodu, znaci negdje se moze rezervirati termin, ali nije glavni put.",
+    "Postoji link Google Reviews, ali ocjena i broj recenzija se ne prikazuju na stranici.",
+    "Nema stranica po gradovima u Minnesoti, usluge su grupirane samo po vrsti.",
+    "Pomoc oko osiguranja spominje se unutar sekcije Our Process, ali nema svoju stranicu.",
+    "Meta Pixel, Google Tag Manager i Google Analytics 4 su u kodu.",
+    "Nema pracenja poziva, iako vrte placene oglase i primarni CTA je telefon.",
+    "Navigacija: Home, Services, Projects, About Us, Tips, Contact Us, Get a Quote."
+  ],
+  "offer": "Missed call text back i hvatanje hitnih upita izvan radnog vremena: tko ne dobije nikoga odmah dobije poruku i mjesto gdje ostavi detalje, pa se hitno odvoji od planiranog.",
+  "hook_type": "missed_calls",
+  "hook_line": "Placate oglase da covjek dodje na stranicu, a onda mu u dva ujutro ponudite samo broj telefona. Tko ne nazove, nazove sljedecu firmu s liste.",
+  "video_beats": [
+    "0-10s: lakeside-restoration.com otvoren na ekranu, ime firme, i tvrdnja da placaju Meta oglase da covjek dodje na stranicu koja nocu nudi samo broj telefona.",
+    "10-30s: pokazi da na cijeloj stranici nema chata, pa pitanje sto se dogodi s onim tko u dva ujutro ne zeli zvati.",
+    "30-60s: rezultat workflowa. Propusten poziv, SMS koji odmah stigne, trazi adresu i fotografiju, i oznaci slucaj kao hitan.",
+    "60-72s: hitno odvojeno od planiranog, da poplava ne ceka u istom redu kao upit za remodeling.",
+    "72-90s: CTA, postavljanje u 48 sati i 30 dana na probu."
+  ],
+  "show_on_their_site": [
+    {
+      "what": "Naslovna, tu je poruka da svaka sekunda broji i 24/7",
+      "url": "https://lakeside-restoration.com/"
+    },
+    {
+      "what": "Contact Us, da se vidi da je jedini stvarni izlaz telefon",
+      "url": "https://lakeside-restoration.com/contact-us"
+    }
+  ],
+  "workflows": [
+    {
+      "id": "v0ROCZp3Rj4UogWj",
+      "why": "Pokriva dolazne pozive kad nitko ne moze podici, uzme podatke i dogovori termin, sto je kod hitnih sanacija nocu cijela razlika."
+    },
+    {
+      "id": "zmWzs6Eymm0BehhY",
+      "why": "Razdvaja hitan slucaj od planiranog remodelinga vec na ulazu, pa poplava ne ceka u istom redu kao upit za ponudu."
+    }
+  ],
+  "tech_stack": [
+    "Webflow",
+    "Calendly",
+    "Google Reviews widget",
+    "Google Tag Manager",
+    "Google Analytics 4",
+    "Meta Pixel"
+  ],
+  "opener": "Mitch, quick question. You are running Meta ads and the site says every second counts, but at two in the morning a homeowner standing in water can only call you. Is a chat something you have looked at, or deliberately avoided?",
+  "language": "en",
+  "dm": "Mitch, went through the Lakeside site. It is genuinely well built, so this is not about the site. It says 24/7 and every second counts, but at 2am the only way in is the phone. Recorded 90 seconds on what happens to those calls. Random message, I know. Made it just for you. [loom]",
+  "followup_viewed": "Mitch, saw you opened it. Honest question, do you know how many calls come in after hours and never get returned? If nobody tracks it, that is usually where the money is hiding. Andrew",
+  "followup_not_viewed": "Mitch, one more go in case this got buried. Short video, 90 seconds, on what happens to the calls that come in after hours when nobody picks up. If it is not a fit just say so and I will leave it. Andrew",
+  "avoid": [
+    "Ne nuditi redizajn stranice. Stranica im je dobra i Andrija je to potvrdio. Ako je napadnes, gubis ga odmah.",
+    "U videu izricito reci da je stranica dobro napravljena, prije nego predjes na ono sto fali.",
+    "Nikad ne mijesati s Lakeside Restoration LLC iz Floride. To je druga firma, druga domena, drugi vlasnici. Ako slucajno otvoris lakeside247.com, to nije on.",
+    "Ne govoriti da im je stranica losa. Moderna je i na Webflowu, problem je sto nocu ne hvata nista.",
+    "Ne izmisljati koliko poziva propusta ni koliko hitnih slucajeva izgubi. Nemamo te brojke.",
+    "Ne objasnjavati mu kako radi sanacija stete. Ima preko 12 godina i preko 2000 projekata.",
+    "Ne tvrditi da Calendly ne koriste. Vidimo da je u kodu, ne i kako je postavljen."
+  ],
+  "sources": [
+    "https://www.linkedin.com/in/mitchell-spence-887739b1/",
+    "https://lakeside-restoration.com/",
+    "https://lakeside-restoration.com/about-us",
+    "https://rocketreach.co/mitchell-spence-email_17193067",
+    "https://www.buildzoom.com/contractor/lakeside-restoration-llc"
+  ],
+  "workflow_gap": {
+    "what_to_show": "Cisti missed call text back: propusten poziv odmah okida SMS koji trazi adresu i fotografiju. Za sanaciju stete je to najjaci prikaz, a u katalogu ga nemamo.",
+    "n8n_search": "missed call text back twilio"
+  }
+}

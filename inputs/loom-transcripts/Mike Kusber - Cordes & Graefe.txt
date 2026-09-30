@@ -1,0 +1,33 @@
+0:00 Hello Mike, my name is Andrew. I know you probably don't know me, but that's ok. I'm right here sitting on your LinkedIn profile.
+0:09 And the reason for that is that I'm currently working with HVAC companies, helping them recover about 5 to 10 thousand bugs on a monthly basis.
+0:16 And currently I'm working with a HVAC company in Spain. And what I've built for them is an end-to-end pipeline, which is reactivating all leads inside of their CRM system.
+0:27 I just wanted to make this short video for you and just show you a couple of workflows and examples that we've built for other HVAC companies and just show you how HVAC companies are doing digitalizations today.
+0:38 So if you would be interested in learning any of these workflows to be to be implemented for yourself or for your company, you can do it in about 48 hours and it will be completely free and you can try it out for three days and see if it brings some value to you.
+0:51 Other than that, I can just show you two or three workflows that we are currently implementing today, and then maybe you can get some ideas and maybe you can get some value from this video about how HVAC companies are currently doing digitalizations in that space.
+1:05 So, yeah, I'm just going to jump right in and then you can follow along and see the workflows that we are currently implementing.
+1:11 So, the first one would be just a typical chatbot that sits on your website. Or on your WhatsApp agent and it just talks to people through text, through voice, through image and documents.
+1:28 So, this way people can reach out over WhatsApp or over your website. They can leave information and talk about parts that they need and spare parts that they want for the company.
+1:37 And this way you can respond to them immediately before they go to the competition. And you can give them information about what kind of, you can basically give them any information that they want because this AI agent is trained on your website.
+1:52 It's basically an HVAC expert, so it knows a lot of things, and it can give them some of the information that they want.
+1:57 It can also qualify them. It can store all of that information. And then it can give a summary to their team, to your team, and say something like, hey, this is a person that just reached out.
+2:08 They need this, this, and this. Please reach out back to them in the shortest way possible. So, this is just one example that we did.
+2:18 And all of these workflows are highly, highly customizable. So, anything that you want to do, that's basically possible because we have a lot of nodes that we can implement inside of these workflows.
+2:31 And the second system would be the one that I talked about, a company in Spain. So this is a reactivation workflow.
+2:38 It's connected to the CRM system. and then it does a data collection about all of the people inside of the CRM system, and then does deal processing and inactivity detection.
+2:49 So this one is connected to Zoho, but we are connecting to any CRM that is needed. And then it goes through each and every lead that got a quote and got a proposal from you.
+2:58 And it's currently sitting in the CRM system and nobody is paying attention to it because a lot of HVAC companies do a lot of quotes, a lot of proposals.
+3:07 And people just don't have the time to follow up to each every one of them and this way leads are sitting and sitting in The CRM system and nobody's reaching out to them and basically they are dying out inside of the CRM system, but this way this this Workflow is able to detect that and then basically
+3:24 it does an AI evaluation and follow-up decision. So it says, okay this person received Proposal or a quote like a week or two weeks ago.
+3:32 They have not responded yet. So then it sends a personalized Follow-up email or message to that person. So this is the channel routing in the CRM actions category right here So it sends them a WhatsApp message, an email, or this was also connected to Slack.
+3:51 But yeah, it says something like, hey, we sent you a proposal a week or two weeks ago. Did you have a time to look it over?
+3:57 Do you need any more information? And stuff like that. So this way, people can are then reminded about that and they are then a lot, then it's a lot more likely that they respond and they actually confirm the quote and they go along with the job.
+4:13 So there's basically a reactivation system. And then the last thing that I wanted to show you is this HVAC agent, so this acts as an HVAC secretary, basically picking up the phone when you're not available, so that means after hours, or we're usually setting up that after 10 seconds of the phone ringing
+4:34 , if a person is not picking up, then this agent is picking up and has all the memory about the company.
+4:40 It also is connected to a calendar and to the database, and then it can basically talk to the people, give them information when you're not available, it can also qualify them, ask them questions about their situation, and then after it, after it gets all that information, it says, okay, and thank you
+5:00 for all this information, somebody will call you back in X, Y amount of time, and then it gives you all that information, gives you the summary and says, hey, this person just called, you weren't able to answer, they need this, this, and this.
+5:10 this, and then you can call them back. So this is basically how we are able to catch people through phone that would usually go to the competition or they would just seek information.
+5:20 information somewhere else, this way we are able to provide our HVAC clients a secretary that is catching each and every lead that's going into their system.
+5:30 Yeah, so this is it. I just want to show you these three workflows. As I mentioned, if you wanted to try out any one of them, you can.
+5:38 I can set it up in about 48 hours. You can try it, no charge, for 30 days and just see how it's working for us, how it's working for you.
+5:46 If this sounds interesting, you can just reply to my message and we can schedule a 15-minute call. I can give you more information on this and then we can see if this is something interesting to you.
+5:55 That's it, Mike. Thank you for watching. If you watched this far, that's it. Bye bye.

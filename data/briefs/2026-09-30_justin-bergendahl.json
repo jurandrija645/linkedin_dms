@@ -1,0 +1,92 @@
+{
+  "name": "Justin Bergendahl",
+  "linkedin_url": "https://www.linkedin.com/in/justin-bergendahl-8326349b",
+  "role": "Vlasnik",
+  "company": "Kellogg Plumbing LLC",
+  "company_website": "https://www.kelloggplumbingllc.com/",
+  "location": "Meridian, Idaho, SAD",
+  "vertical": "home_services",
+  "identity_confidence": "high",
+  "identity_note": "HomeAdvisor profil firme je doslovno na njegovo ime (rated.JUSTINBERGENDAHL), ZoomInfo i RocketReach ga navode kao Company Ownera, a recenzije ga spominju poimence (Justin is the best). Postoji i Kellogg Plumbing Inc. drugdje, to nije ta firma.",
+  "tier": "A",
+  "tier_reason": "Vlasnik plumbing firme u Boise/Meridian podrucju, sam radi i odlucuje. Recenzije odlicne, a stranica ima generican formular od pet polja, nema chata, radi pon-pet do 16:30 uz Emergency Services Available.",
+  "asset_type": "website_demo",
+  "asset_reason": "Pravilo 4. Vlasnik, identitet high, samostalni LLC. Stranici fali sve s liste: nema bookinga, formular je ime-mail-telefon-poruka, nema chata ni odgovora izvan 8-16:30, ocjena nije na naslovnici, i nema stranica po gradovima iako pokrivaju deset mjesta. Stranica je na Dudi, sto agencije cesto preprodaju, ali nema agencijskog potpisa u footeru pa ne pada pod pravilo 3.",
+  "one_liner": "Sljedeci: Justin Bergendahl. Vlasnik Kellogg Plumbinga iz Meridiana, Idaho, 5 zvjezdica iz 115 recenzija. Loom fokusiraj na redizajn s hitnim upitom izvan radnog vremena i stranicama za Boise, Nampa, Eagle.",
+  "summary": [
+    "Kellogg Plumbing LLC, Meridian, ID. Bojleri, vodovodne, plinske i kanalizacijske linije, well pumpe, septicke jame, backflow, hitne intervencije. Residential i light commercial.",
+    "Birdeye: 5 zvjezdica iz 115 recenzija. BuildZoom rang u top 11% licenciranih izvodjaca u Idahu. Pokrivaju Boise, Meridian, Eagle, Star, Nampa, Caldwell, Middleton, Mountain Home, McCall, Cascade.",
+    "Justin je vlasnik i sam radi na terenu, prije toga journeyman plumber u RM Mechanical i ACCO, crew leader u LJ Kruse u Bay Areai."
+  ],
+  "observed_on_site": [
+    "Stranica je na Duda builderu, template dizajn. Navigacija: Home, Water Heaters, Water/Gas/Sewer Lines, Maintenance and Service Calls, Gallery, Contact Us.",
+    "Kontakt formular ima samo First Name, Last Name, Email, Phone, Message. Nema pitanja o vrsti problema ni hitnosti.",
+    "Radno vrijeme pon-pet 8:00-16:30, vikend zatvoreno, a istovremeno pise Emergency Services Available.",
+    "Nema live chata ni online bookinga.",
+    "Google My Business badge postoji, ali ocjena ni broj recenzija nisu prikazani na naslovnici.",
+    "Nema stranica po gradovima. Spominje se samo Meridian and surrounding areas.",
+    "Vlasnikovo ime se nigdje ne spominje, iako ga recenzije hvale poimence.",
+    "Telefon (208) 989-4868."
+  ],
+  "offer": "Redizajnirana stranica koja je vec napravljena i hostana: hitni i obicni upit u koracima, AI asistent koji odgovara i izvan 8-16:30, i lokalne stranice za Boise, Nampa, Eagle i Caldwell.",
+  "hook_type": "missed_calls",
+  "hook_line": "Pise Emergency Services Available, a stranica radi do 16:30 i ima samo formular s porukom. Tko ima procurio bojler u subotu, ne zna hoce li mu se itko javiti.",
+  "tech_stack": ["Duda", "Google Analytics 4", "LocalBusiness schema"],
+  "opener": "",
+  "video_beats": [
+    "0-10s: kelloggplumbingllc.com na ekranu, Justinovo ime. Tvrdnja: pise Emergency Services Available, a jedini put za upit nakon 16:30 je formular s porukom.",
+    "10-20s: prebaci na demo. Reci da je koncept napravljen na temelju njegove javne stranice, da je ziv i da je link u poruci.",
+    "20-45s: ispuni novi upit uzivo. Hitno ili planirano, vrsta problema (bojler, curenje, kanalizacija, plin), grad, fotka, termin ili zahtjev za hitni poziv.",
+    "45-70s: AI asistent uzivo. Pitaj ga je li normalno da bojler curi odozdo i pokrivaju li Nampu, pa neka ponudi termin.",
+    "70-90s: CTA. Jedna recenica da idu i stranice za gradove koje vec pokriva i da se 115 recenzija vidi na naslovnici. Pitanje zeli li da ga prebacim na njegovu domenu."
+  ],
+  "show_on_their_site": [
+    {"what": "Naslovna, Emergency Services Available bez ikakvog puta izvan radnog vremena, i badge bez ocjene", "url": "https://www.kelloggplumbingllc.com/"},
+    {"what": "Contact Us, formular s pet polja i radno vrijeme 8-16:30", "url": "https://www.kelloggplumbingllc.com/contact-us"}
+  ],
+  "website_demo": {
+    "why": "Recenzije i reputacija su vec jake, 5 zvjezdica iz 115. Stranica to ne koristi i ne hvata hitne upite izvan radnog vremena, a plumbing je posao gdje hitnoca odlucuje tko dobije posao. Vlasnik je, sam odlucuje.",
+    "current_site_problems": [
+      "Formular ima samo ime, prezime, mail, telefon i poruku, nema pitanja o vrsti problema ni hitnosti.",
+      "Pise Emergency Services Available, a radno vrijeme je pon-pet 8-16:30 i nema chata ni ikakvog puta za hitni upit.",
+      "Nema online bookinga.",
+      "Ocjena 5 iz 115 recenzija nije prikazana na naslovnici, samo GMB badge.",
+      "Nema stranica po gradovima iako pokrivaju Boise, Nampa, Eagle, Caldwell i jos sest mjesta.",
+      "Justinovo ime i prica se nigdje ne spominju, iako ga recenzije hvale poimence."
+    ],
+    "pages_to_build": ["home", "water heaters", "water, gas i sewer lines", "emergency plumbing", "request service", "Boise", "Nampa", "Eagle", "Caldwell", "about Justin", "reviews"],
+    "ai_widget": "Odgovara na pitanja o bojlerima, curenju, zacepljenoj kanalizaciji, plinskim linijama, well pumpama i septickim jamama, pita grad i hitnost, kod hitnog slucaja prikaze broj i uzme podatke za povratni poziv, inace ponudi termin.",
+    "inquiry_flow": "Hitno ili planirano, vrsta problema, residential ili commercial, grad iz liste koju pokrivaju, opis i fotka, zeljeni termin, pa potvrda SMS-om i Justinu obavijest s kompletnim sazetkom.",
+    "seo_fixes": [
+      "Zasebne stranice za Boise, Nampa, Eagle, Caldwell uz Meridian",
+      "Stranica Emergency plumbing Meridian i Boise",
+      "Plumber schema s radnim vremenom i podrucjem pokrivanja",
+      "Ocjena i recenzije na naslovnici",
+      "Title i meta opis po usluzi"
+    ],
+    "brand_risk": "none",
+    "demo_url": "",
+    "demo_status": "todo"
+  },
+  "workflows": [],
+  "language": "en",
+  "dm": "Justin, 115 five star reviews and the site still ends in a five field form, closed after 4:30, while it says Emergency Services Available. Random message, I know. I rebuilt it as a concept and put it online, with an emergency request flow and pages for Boise and Nampa. Made it just for you. [loom] [demo] Andrew",
+  "permission_dm": "",
+  "followup_viewed": "Justin, saw you watched it. Want me to point the demo at your domain for a week so you can see what it catches after 4:30? Nothing to sign, and if it does nothing I take it down.",
+  "followup_not_viewed": "Justin, trying once more in case this got buried. I rebuilt your site as a concept, it is live, and the 90 second video walks through the emergency request flow. If it is not a fit just say so and I will stop.",
+  "avoid": [
+    "Nikad ne reci ni natukni da je demo njegova stranica. Uvijek koncept na temelju javne stranice.",
+    "Ne izmisljati recenzije za demo. Ako se prikazuju, samo stvarne s Birdeyea ili Googlea, uz izvor.",
+    "Ne tvrditi koliko hitnih poziva gubi.",
+    "Ne kritizirati recenzije ni kvalitetu rada, to mu je najjaca strana."
+  ],
+  "sources": [
+    "https://www.linkedin.com/in/justin-bergendahl-8326349b/",
+    "https://www.kelloggplumbingllc.com/",
+    "https://www.kelloggplumbingllc.com/contact-us",
+    "https://reviews.birdeye.com/kellogg-plumbing-169635126530079",
+    "https://www.homeadvisor.com/rated.JUSTINBERGENDAHL.133825865.html",
+    "https://www.buildzoom.com/contractor/kellogg-plumbing-llc",
+    "https://www.zoominfo.com/p/Justin-Bergendahl/-1539155114"
+  ]
+}

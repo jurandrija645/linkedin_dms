@@ -1,0 +1,92 @@
+{
+  "name": "Vladimir Janackovic",
+  "linkedin_url": "https://www.linkedin.com/in/vladimirjanackovic",
+  "role": "CEO i vlasnik",
+  "company": "Marquis Intelligence (Marquis Commerce d.o.o.)",
+  "company_website": "https://www.marquis.rs/",
+  "location": "Beograd, Srbija",
+  "vertical": "hvac",
+  "identity_confidence": "high",
+  "identity_note": "Ime i uloga potvrdjeni na marquis.rs (autorska stranica i blog) i na LinkedIn profilu.",
+  "tier": "A",
+  "tier_reason": "Vlasnik i CEO u HVAC/IAQ vertikali, donosi odluke sam. Ozbiljne reference bez vidljivog outbound kanala.",
+  "asset_type": "n8n_loom",
+  "asset_reason": "Pravilo 5. Sajt je moderan, dvojezican, uredan blog i case studiji. Propust nije u sajtu nego u tome sto nema izlaznog kanala prema hotelima i projektantima.",
+  "one_liner": "Sljedeci: Vladimir Janackovic. CEO i vlasnik Marquis Intelligence u Beogradu, IAQ i preciscavanje vazduha. Loom fokusiraj na outbound prema hotelima i projektantskim birooima, snimaj na nasem jeziku.",
+  "summary": [
+    "Marquis Intelligence radi preciscavanje vazduha i IAQ, 34 godine na trzistu, sjediste Carice Milice 12, Beograd.",
+    "Reference su jake: projekti preciscavanja vazduha na London City Airportu od 2015, i prvi IAQ Smart uredaj proizvodjaca GPS Air instaliran u Evropi 2025.",
+    "Vladimir pise blog na sajtu firme, znaci sam stoji iza sadrzaja i komunikacije."
+  ],
+  "observed_on_site": [
+    "Sajt postoji na srpskom i engleskom (marquis.rs i marquis.rs/en).",
+    "Jedini put do njih je kontakt formular pri dnu: ime i prezime, email, telefon, poruka, checkbox za privatnost.",
+    "Nema live chata.",
+    "Nema online bookinga ni zakazivanja termina.",
+    "Adresa je navedena, radno vrijeme nije.",
+    "Postoje blog i sekcija case studija (marquis.rs/oznaka/studije-slucaja).",
+    "Google ocjena nije nadjena ni spomenuta na sajtu.",
+    "U kodu stranice jos stoji Universal Analytics, koji Google ne obradjuje od srpnja 2023.",
+    "Instalirana su dva plugina za formulare istovremeno, WPForms i Contact Form 7.",
+    "Imaju LinkedIn Insight pixel, znaci netko im vec radi nesto na LinkedInu."
+  ],
+  "offer": "Outbound pipeline prema hotelima, restoranima i projektantskim birooima u regiji: liste odlucivaca, personalizirani prvi kontakt koji se poziva na njihove postojece reference, i pracenje odgovora.",
+  "hook_type": "outbound_pipeline",
+  "hook_line": "Imate referencu na London City Airportu, a hotelijer u Beogradu koji bas sad bira dobavljaca za preciscavanje vazduha za to nikad nece saznati ako mu se ne javite prvi.",
+  "video_beats": [
+    "0-10s: marquis.rs otvoren na ekranu, ime, i tvrdnja da reference ovakvog kalibra rade samo za one koji su vec culi za njih.",
+    "10-30s: sekcija studija slucaja na njihovom sajtu, London City Airport, pa pitanje koliko hotela i biroa u regiji uopce zna da to postoji.",
+    "30-60s: rezultat workflowa na ekranu, lista odlucivaca u hotelima i projektantskim birooima i gotova personalizirana prva poruka koja se poziva bas na taj projekat.",
+    "60-75s: n8n canvas par sekundi, samo kao dokaz da je stvarno izgradjeno.",
+    "75-90s: CTA, ponuda da se postavi u 48 sati i testira 30 dana."
+  ],
+  "show_on_their_site": [
+    {
+      "what": "Naslovna, da se vidi o cemu se radi",
+      "url": "https://www.marquis.rs/"
+    },
+    {
+      "what": "Studije slucaja, tu je London City Airport",
+      "url": "https://www.marquis.rs/oznaka/studije-slucaja/"
+    }
+  ],
+  "workflows": [
+    {
+      "id": "38nWu3SXo9vp43R8",
+      "why": "Skuplja i obogacuje liste odlucivaca po zadanom profilu, tocno ono sto treba za hotele i projektantske biroe."
+    },
+    {
+      "id": "zmWzs6Eymm0BehhY",
+      "why": "Pokazuje sto se dogodi kad netko odgovori: kvalifikacija i follow-up idu sami, bez da Vladimir svaki put pise rucno."
+    }
+  ],
+  "language": "hr",
+  "dm": "Vladimire, gledao sam Marquis sajt. London City Airport i prvi IAQ Smart uredaj u Evropi su ozbiljne reference, ali hotelijer koji bas sad bira dobavljaca za to nece saznati ako mu se ne javite prvi. Snimio sam kratak video kako bi izgledao outbound prema hotelima i projektantskim birooima. Znam da je poruka random, napravio sam ga bas za vas. [loom]",
+  "followup_viewed": "Vladimire, vidim da ste pogledali video. Zanima li vas da vam posaljem primjer liste, dvadesetak hotela i biroa iz regije s imenima odlucivaca, pa da vidite je li to uopce upotrebljivo? Bez obaveze.",
+  "followup_not_viewed": "Vladimire, javljam se jos jednom za slucaj da je poruka propala u LinkedIn notifikacijama. Video je kratak, 90 sekundi, o tome kako doci do hotela i projektantskih biroa koji jos ne znaju za vas. Ako nije tema, slobodno recite i necu vise pisati.",
+  "avoid": [
+    "Ne govoriti da im je sajt los ili zastario, nije. Sajt je uredan i dvojezican.",
+    "Ne nuditi redizajn sajta, propust nije tamo.",
+    "Ne spominjati izmisljene postotke ni tudje rezultate. Nemamo objavljen case study u IAQ vertikali.",
+    "Ne objasnjavati mu sto je IAQ, radi to 34 godine."
+  ],
+  "sources": [
+    "https://www.marquis.rs/",
+    "https://www.marquis.rs/en/author/vladimir-janackovic/",
+    "https://www.marquis.rs/en/blog/business-year-2025-at-marquis-intelligence/",
+    "https://www.marquis.rs/en/blog/air-in-focus-for-34-years/",
+    "https://www.linkedin.com/in/vladimirjanackovic/"
+  ],
+  "tech_stack": [
+    "WordPress",
+    "tema woodmart",
+    "WPBakery",
+    "WPForms",
+    "Contact Form 7",
+    "Google Analytics 4",
+    "Universal Analytics (ugasen 2023)",
+    "LinkedIn Insight",
+    "Yoast SEO"
+  ],
+  "opener": "Vladimire, jedno pitanje. Na sajtu vam jos stoji stari Universal Analytics kod, a Google ga je ugasio u julu 2023. Znaci zadnje tri godine se promet ne mjeri kako treba. Je li to namjerno ili je jednostavno ostalo?"
+}

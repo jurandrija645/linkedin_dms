@@ -1,0 +1,111 @@
+{
+  "name": "Srdjan Hadzimurtezic",
+  "linkedin_url": "https://www.linkedin.com/in/srdjan-h-03666689",
+  "role": "Vlasnik, master licencirani HVAC, vodoinstalaterski i plinski izvodjac",
+  "company": "East Coast Mechanical LLC, danas posluje kao HVAC Mechanical Service",
+  "company_website": "https://hvacmechanicalservice.com/",
+  "location": "4471 MacArthur Blvd NW Suite 104, Washington, DC 20007",
+  "vertical": "hvac",
+  "identity_confidence": "high",
+  "identity_note": "Lanac potvrde: LinkedIn ga navodi kao Business Ownera u East Coast Mechanical LLC u Washingtonu DC. Birdeye listing te firme je na 4471 MacArthur Blvd NW Suite 104 sa 70 recenzija. Stara domena ecmechanicalservices.com radi 301 redirect na hvacmechanicalservice.com, a ta stranica navodi istu adresu i mail contact@ecmechanicalservices.com. Firma je u medjuvremenu prebrendirana u HVAC Mechanical Service. Njegovo ime nije napisano na samoj stranici, pa u videu spominji ime firme, ne titulu.",
+  "tier": "A",
+  "tier_reason": "Vlasnik HVAC firme u Washingtonu DC, sam donosi odluke. Stranica je zastarjela i nema nijedan put do upita osim telefona, sto je konkretan i vidljiv propust.",
+  "asset_type": "website_demo",
+  "asset_reason": "Pravilo 4. Pogodila cetiri kriterija: dated mid-2010s WordPress template, nema nijednog formulara za upit, nema chata ni bookinga, i nema prikazane ocjene iako ima 70 recenzija. Identitet je sada high, firma je samostalni LLC bez fransiznog brenda.",
+  "one_liner": "Sljedeci: Srdjan Hadzimurtezic. Vlasnik East Coast Mechanical, danas HVAC Mechanical Service, Washington DC. Loom snimaj na nasem jeziku i pokazi mu redizajniranu stranicu koju si vec napravio.",
+  "summary": [
+    "HVAC, ventilacija, plin i vodoinstalacije u Washingtonu DC i okolici. Master licenca za HVAC, vodoinstalacije i plin, radi 24/7.",
+    "70 recenzija na Birdeye listingu, a stranica se hvali petzvjezdicnom uslugom bez da ijednu ocjenu prikaze.",
+    "Firma se prebrendirala iz East Coast Mechanical u HVAC Mechanical Service, stara domena jos redirecta, a LinkedIn mu je ostao na starom imenu."
+  ],
+  "observed_on_site": [
+    "Template izgleda kao WordPress iz sredine 2010-ih.",
+    "Nema formulara za upit nigdje na stranici. Jedini CTA je Contact Us gumb koji vodi na telefon (202) 480-1337.",
+    "Nema live chata.",
+    "Nema online zakazivanja termina.",
+    "Radno vrijeme nije navedeno, iako firma radi 24/7.",
+    "Ocjena i broj recenzija se ne prikazuju, stoji samo tvrdnja o petzvjezdicnoj usluzi i link na Google Maps.",
+    "Postoje zasebne stranice po uslugama i po gradovima: Alexandria, Arlington, Bethesda, Fairfax.",
+    "Navigacija: Home, About Us, Services, Service Area, Contact.",
+    "Mail je contact@ecmechanicalservices.com, dakle na staroj domeni, dok stranica stoji na novoj."
+  ],
+  "offer": "Redizajnirana stranica koja je vec napravljena i hostana: AI asistent koji javlja i nocu, inquiry flow kojeg sada uopce nema, i 70 recenzija konacno prikazanih gdje ih ljudi vide.",
+  "hook_type": "missed_calls",
+  "hook_line": "Firma radi 24/7, a na stranici je jedini nacin da te netko dobije taj jedan broj telefona. Kad si u podrumu kod musterije u devet navecer, taj covjek nema gdje ostaviti upit.",
+  "video_beats": [
+    "0-10s: hvacmechanicalservice.com otvoren na ekranu, ime firme, i tvrdnja da na cijeloj stranici nema nijednog mjesta gdje netko moze ostaviti upit osim telefona.",
+    "10-20s: prebaci na demo. Reci da je koncept napravljen na temelju njihove javne stranice, da je ziv i da ce link dobiti u poruci.",
+    "20-45s: ispuni novi inquiry flow uzivo. Tip sustava, kvar ili ugradnja, hitnost, adresa, termin.",
+    "45-70s: AI asistent uzivo. Pitaj ga nesto o zamjeni furnacea, pa pokazi da uzme kontakt i ponudi termin i kad je firma na terenu.",
+    "70-90s: CTA. Jedna recenica da su tu i njegovih 70 recenzija konacno prikazane, pa pitanje zeli li da se prebaci na njegovu domenu."
+  ],
+  "show_on_their_site": [
+    {
+      "what": "Naslovna, da se vidi da nema formulara nego samo telefon",
+      "url": "https://hvacmechanicalservice.com/"
+    },
+    {
+      "what": "Contact stranica, isto samo telefon",
+      "url": "https://hvacmechanicalservice.com/contact/"
+    }
+  ],
+  "website_demo": {
+    "why": "Od svih dosad, kod njega je propust najveci i najvidljiviji. Stranica nema nijedan formular, znaci svaki posjetitelj koji ne nazove odmah je izgubljen. Firma radi 24/7 a stranica ne hvata nista nocu. Uz to je zastarjela, pa razlika izmedju njegove i nove stranice udara na prvi pogled, a to je tocno ono sto video treba pokazati.",
+    "current_site_problems": [
+      "Na cijeloj stranici nema nijednog formulara za upit. Jedini put do njih je telefonski poziv.",
+      "Nema chata, pa upiti izvan radnog vremena nemaju gdje sjesti.",
+      "Nema online zakazivanja termina.",
+      "Template je iz sredine 2010-ih i izgleda starije od konkurencije u DC-u.",
+      "70 recenzija se nigdje ne prikazuje, stoji samo nepotkrijepljena tvrdnja o petzvjezdicnoj usluzi.",
+      "Radno vrijeme nije navedeno iako firma radi 24/7, sto je prodajni argument koji propada.",
+      "Mail je jos na staroj domeni ecmechanicalservices.com dok stranica stoji na novoj, sto odaje nedovrsen rebrand."
+    ],
+    "pages_to_build": [
+      "home",
+      "heating",
+      "air conditioning",
+      "gas i plumbing",
+      "emergency 24/7",
+      "book a visit",
+      "Alexandria",
+      "Arlington",
+      "Bethesda",
+      "Fairfax"
+    ],
+    "ai_widget": "Odgovara na pitanja o kvarovima furnacea i klime, o hitnim intervencijama i o tome pokrivaju li odredjeni grad. Trazi adresu i tip sustava, pa ponudi termin. Radi i kad je firma na terenu.",
+    "inquiry_flow": "Kuca ili poslovni prostor, tip sustava (furnace, klima, toplinska pumpa, plin, voda), je li kvar ili nova ugradnja, koliko je hitno (danas, ovaj tjedan, planiram), adresa i zip, upload fotografije sustava, izbor termina, pa potvrda SMS-om.",
+    "seo_fixes": [
+      "Zadrzati i pojacati postojece gradske stranice za Alexandriju, Arlington, Bethesdu i Fairfax, dodati Washington DC",
+      "Title i meta opis po svakoj usluzi umjesto jednog generickog",
+      "HVACBusiness schema markup s radnim vremenom 24/7 i licencom",
+      "Google recenzije povucene na naslovnicu",
+      "Uskladiti mail i domenu, sada su razlicite"
+    ],
+    "brand_risk": "none",
+    "demo_url": "",
+    "demo_status": "todo"
+  },
+  "workflows": [],
+  "language": "hr",
+  "dm": "Srdjane, gledao sam stranicu od East Coast Mechanical. Radite 24/7, a na cijeloj stranici nema nigdje formulara, samo broj telefona. Napravio sam ti verziju kao koncept, ziva je i mozes je kliknuti. Znam da je poruka random, napravio sam je bas za tebe. [loom] [demo]",
+  "permission_dm": "",
+  "followup_viewed": "Srdjane, vidim da si pogledao. Ako te zanima, mogu demo pustiti tjedan dana na tvojoj domeni da vidis sto radi sa stvarnim prometom. Nista ne potpisujes, i ako ti ne donese nista, skinem ga.",
+  "followup_not_viewed": "Srdjane, javljam se jos jednom za slucaj da je LinkedIn progutao poruku. Napravio sam redizajn vase stranice kao koncept, ziv je, a video je 90 sekundi o tome gdje se gube upiti kad na stranici nema formulara. Ako nije tema, reci slobodno.",
+  "avoid": [
+    "Nikad reci ni natuknuti da je demo njegova stranica. Uvijek reci da je koncept napravljen na temelju javne stranice.",
+    "Ne oslovljavati ga titulom i ne vezati njegovo ime uz stranicu, jer ga stranica nigdje ne navodi.",
+    "Ne izmisljati koliko poziva propusta ni koliko upita gubi. Nemamo taj podatak.",
+    "Paziti s imenom firme. LinkedIn kaze East Coast Mechanical, stranica kaze HVAC Mechanical Service. Spomeni oba da se vidi da si skuzio rebrand.",
+    "Ne govoriti da su mu recenzije lose. Ima ih 70 i to je uporiste, problem je samo sto se ne vide."
+  ],
+  "sources": [
+    "https://www.linkedin.com/in/srdjan-h-03666689/",
+    "https://www.linkedin.com/in/srdjan-hadzimurtezic-55177b2a9/",
+    "https://hvacmechanicalservice.com/",
+    "https://reviews.birdeye.com/east-coast-mechanical-166615523490630",
+    "https://www.dcdirections.com/s/heating-ventilation-air-conditioning-mechanical-service--4471-macarthur-blvd-nw-apt-104-washington-dc-20007",
+    "https://www.buildzoom.com/contractor/east-coast-mechanical-llc-dc"
+  ],
+  "tech_stack": [],
+  "opener": "Srdjane, jedno pitanje. Na sajtu vam nigdje nema formulara, samo broj telefona, a radite 24/7. Kad vas neko zove u tri ujutro i ne dobije nikoga, gdje taj covjek zavrsi? Zanima me kako to sad rjesavate."
+}

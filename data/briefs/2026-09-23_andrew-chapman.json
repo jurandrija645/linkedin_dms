@@ -1,0 +1,122 @@
+{
+  "name": "Andrew Chapman",
+  "linkedin_url": "https://www.linkedin.com/in/andrew-chapman-989a9982",
+  "role": "Osnivac, vodi prodaju i operativu",
+  "company": "Eco Electrical & Building Services Ltd",
+  "company_website": "https://www.eco-electricalltd.co.uk/",
+  "location": "Unit 1 Wood End Business Park, Marsh Moss Lane, Burscough, Lancashire L40 0PH, UK",
+  "vertical": "home_services",
+  "identity_confidence": "high",
+  "identity_note": "Sluzbeni kontakt mail firme je andrew@eco-electricalltd.co.uk, a Priva partner finder i construction.co.uk navode Andrewa Chapmana kao kontakt osobu. Companies House broj firme je 08160686. Njegovo ime nije napisano na samoj stranici, pa u videu spominji ime firme.",
+  "tier": "A",
+  "tier_reason": "Osnivac je i vodi prodaju i operativu, dakle sam odlucuje. Stranica nema nijedan nacin da se upit kvalificira ni da se rezervira termin, a firma ima reference koje nigdje ne koristi.",
+  "asset_type": "website_demo",
+  "asset_reason": "Pravilo 4. Vlasnik je, a stranici fali vise od onoga sto bi je spasilo: nema online zakazivanja, nema kvalifikacije upita (samo Contact Form 7), i nema prikazane ocjene iako im je Trustpilot skripta u kodu. Priva dealership nije fransiza nego dilerstvo proizvoda, stranica je njihova i mogu je mijenjati, pa pravilo 3 ne pali.",
+  "one_liner": "Sljedeci: Andrew Chapman. Osnivac Eco Electrical & Building Services u Lancashireu, BEMS i elektrika za komercijalne objekte. Radi mu demo stranicu, ima reference koje nigdje ne koristi.",
+  "summary": [
+    "Rade Building Energy Management Systems, znaci upravljanje grijanjem, ventilacijom i klimom u komercijalnim objektima, plus elektrika po sjeverozapadu Engleske.",
+    "Na stranici im stoje logotipi Thorpe Parka, Legolanda, Manchester Uniteda i Forestry Commissiona. To su reference kakve konkurencija nema.",
+    "Po vlastitom profilu su jedan od samo dva Priva Dual Dealera u UK-u, ali to na svojoj stranici ne spominju nigdje."
+  ],
+  "observed_on_site": [
+    "WordPress na flatsome temi, dizajn izgleda relativno svjez, assetsi iz 2023.",
+    "Navigacija: Home, BEMS, Horticulture, Case Studies, News, Contact Us.",
+    "Jedini formular je Contact Form 7, najbazicniji WordPress formular, bez ijednog pitanja koje kvalificira objekt ili posao.",
+    "Nema online zakazivanja termina ni obilaska objekta.",
+    "U podnozju postoji chat link, ali u kodu nema nijednog pravog chat widgeta.",
+    "Trustpilot skripta je u kodu, ali ocjena i broj recenzija se nigdje na stranici ne prikazuju.",
+    "Glavni CTA kroz cijelu stranicu je Talk with us.",
+    "Postoji sekcija Case Studies s projektima i sekcija News.",
+    "Logotipi Thorpe Park, Legoland, Manchester United i Forestry Commission stoje na naslovnici.",
+    "Priva se ne spominje nigdje na stranici, iako im je to najjaci akreditiv.",
+    "Telefon 01704 895931. Radno vrijeme nije navedeno.",
+    "U kodu je i placeholder mail your@email, dakle formular nije do kraja dovrsen."
+  ],
+  "offer": "Redizajnirana stranica koja je vec napravljena i hostana: Priva dealership i reference poput Legolanda konacno na naslovnici, inquiry flow koji kvalificira objekt prije razgovora, i AI asistent koji odgovara na BEMS pitanja.",
+  "hook_type": "instant_quote",
+  "hook_line": "Na naslovnici vam stoje Legoland i Manchester United, a jedini put do vas je obican WordPress formular bez ijednog pitanja. Napravio sam verziju koja te reference stvarno koristi.",
+  "video_beats": [
+    "0-10s: eco-electricalltd.co.uk otvoren na ekranu, ime firme, i tvrdnja da im reference stoje na naslovnici a nista ih ne pretvara u upit.",
+    "10-20s: prebaci na demo. Reci da je koncept napravljen na temelju njihove javne stranice, da je ziv i da ce link dobiti u poruci.",
+    "20-45s: ispuni novi inquiry flow uzivo. Tip objekta, sektor, kvadratura, postojeci sustav, je li nova instalacija ili nadogradnja, pa termin obilaska.",
+    "45-70s: AI asistent uzivo. Pitaj ga nesto o Privi i o tome rade li skole i bolnice, pa pokazi da uzme kontakt.",
+    "70-90s: CTA. Jedna recenica da uz to idu i stranice po sektorima zbog pretrage, pa pitanje zeli li da se prebaci na njegovu domenu."
+  ],
+  "show_on_their_site": [
+    {
+      "what": "Naslovna, tu su logotipi Legolanda i Manchester Uniteda",
+      "url": "https://www.eco-electricalltd.co.uk/"
+    },
+    {
+      "what": "Contact Us, da se vidi da je jedini put do njih obican formular",
+      "url": "https://www.eco-electricalltd.co.uk/contact-us/"
+    }
+  ],
+  "website_demo": {
+    "why": "Imaju reference kakve u njihovoj niši gotovo nitko nema, Legoland, Manchester United, Forestry Commission, i akreditaciju kao jedan od dva Priva Dual Dealera u UK-u. Sve to stoji ili kao goli logotip ili se uopce ne spominje. Stranica ne radi nista da to pretvori u upit, jedini izlaz je genericki formular. Kod komercijalnog BEMS posla gdje je jedan ugovor velik, to je skupa rupa.",
+    "current_site_problems": [
+      "Jedini put do njih je Contact Form 7, najbazicniji WordPress formular, bez ijednog pitanja o objektu, sektoru ili sustavu.",
+      "Nema online zakazivanja obilaska objekta.",
+      "Nema pravog chata, iako u podnozju stoji chat link.",
+      "Trustpilot skripta je u kodu ali se ocjena nigdje ne prikazuje.",
+      "Priva dealership, njihov najjaci akreditiv, ne spominje se na stranici nigdje.",
+      "Reference Legoland i Manchester United stoje kao goli logotipi, bez price i bez brojki.",
+      "Nema stranica po sektorima (skole, bolnice, sportski objekti, hortikultura), a to je kako ih kupci traze.",
+      "U kodu je ostao placeholder mail your@email."
+    ],
+    "pages_to_build": [
+      "home",
+      "BEMS",
+      "hortikultura",
+      "skole i obrazovanje",
+      "zdravstvo",
+      "sportski i rekreacijski objekti",
+      "Priva partnerstvo",
+      "case studyji po projektu",
+      "zatrazi obilazak objekta"
+    ],
+    "ai_widget": "Odgovara na pitanja o BEMS-u i Privi, o tome koje sektore pokrivaju i rade li nadogradnje postojecih sustava. Trazi tip objekta i lokaciju, pa ponudi termin obilaska.",
+    "inquiry_flow": "Tip objekta (skola, bolnica, sportski objekt, staklenik, ured, ostalo), priblizna kvadratura, postojeci sustav ili nista, je li nova instalacija ili nadogradnja, rok, lokacija, pa izbor termina za obilazak i potvrda mailom.",
+    "seo_fixes": [
+      "Zasebne stranice po sektorima umjesto jedne BEMS stranice",
+      "Priva dealership kao vlastita stranica, to je pojam koji ljudi traze",
+      "Title i meta opis po stranici umjesto jednog generickog",
+      "Case studyji kao zasebne stranice s imenom objekta",
+      "Trustpilot ocjena povucena na naslovnicu",
+      "Popraviti placeholder mail your@email u formularu"
+    ],
+    "brand_risk": "none",
+    "demo_url": "",
+    "demo_status": "todo"
+  },
+  "workflows": [],
+  "tech_stack": [
+    "WordPress",
+    "tema flatsome",
+    "Contact Form 7",
+    "Trustpilot",
+    "Yoast SEO"
+  ],
+  "opener": "Andrew, quick one. Legoland and Manchester United sit on your homepage as logos, and the Priva dual dealership is not mentioned anywhere on the site at all. Is that deliberate, or just never got round to it?",
+  "language": "en",
+  "dm": "Andrew, went through the Eco Electrical site. Legoland and Man United sit there as logos and the Priva dealership is not mentioned once, while the only way in is a plain WordPress form. So I rebuilt it as a concept, it is live, you can click it. Random message, I know. Made it just for you. [loom] [demo]",
+  "permission_dm": "",
+  "followup_viewed": "Andrew, saw you opened it. The part worth stealing even if you bin the rest is the qualifying questions before the enquiry lands, so you are not quoting buildings you never wanted. Happy to point it at your domain for a week.",
+  "followup_not_viewed": "Andrew, one more go in case LinkedIn buried this. I rebuilt your site as a concept, it is live, and the 90 second video walks through the new enquiry flow. If it is not a fit just say so and I will leave it. Andrew",
+  "avoid": [
+    "Nikad reci ni natuknuti da je demo njihova stranica. Uvijek reci da je koncept napravljen na temelju javne stranice.",
+    "Ne oslovljavati ga titulom i ne vezati ime uz stranicu, jer ga stranica nigdje ne navodi.",
+    "Ne tvrditi da su jedini Priva dealer. Podatak je da su jedan od dva Dual Dealera u UK-u i dolazi iz njihovog profila, ne s njihove stranice. Ako se spominje, reci da si to nasao u njihovom profilu.",
+    "Ne izmisljati vrijednost ugovora ni koliko upita gube.",
+    "Ne govoriti da im je stranica ruzna. Nije, relativno je svjeza, problem je sto ne radi nista.",
+    "Oprez s imenom: on se zove Andrew kao i ti kad pises na engleskom. Potpis neka bude samo Andrew, bez objasnjavanja."
+  ],
+  "sources": [
+    "https://www.linkedin.com/in/andrew-chapman-989a9982/",
+    "https://www.eco-electricalltd.co.uk/",
+    "https://www.eco-electricalltd.co.uk/contact-us/",
+    "https://www.priva.com/partnerfinder/eco-electrical-building-services-ltd",
+    "https://www.construction.co.uk/c/699694/eco-electrical-building-services-ltd",
+    "https://find-and-update.company-information.service.gov.uk/company/08160686"
+  ]
+}

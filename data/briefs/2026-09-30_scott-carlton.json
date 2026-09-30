@@ -1,0 +1,78 @@
+{
+  "name": "Scott Carlton",
+  "linkedin_url": "https://www.linkedin.com/in/scott-carlton-ab9616a0",
+  "role": "Vlasnik",
+  "company": "Carlton Landscapes",
+  "company_website": "https://www.carltonlandscapes.co.nz/",
+  "location": "Aro Valley, Wellington, Novi Zeland",
+  "vertical": "home_services",
+  "identity_confidence": "high",
+  "identity_note": "Builderscrack profil (ID, adresa i NZBN verificirani) navodi Scotta Carltona kao vlasnika, Facebook stranica firme ima post Hi I'm Scott Carlton, proud owner, a testimoniali na stranici ga spominju poimence. Postoje druge firme s imenom Carlton Landscape u SAD-u i Kanadi, to nije on.",
+  "tier": "A",
+  "tier_reason": "Vlasnik landscaping i garden maintenance firme u Wellingtonu, sam odlucuje. Radi na terenu s timom, a jedini broj je mobitel i jedini mail je gmail, pa pozivi tijekom posla lako propadnu.",
+  "asset_type": "n8n_loom",
+  "asset_reason": "Pravilo 3. Footer kaze Created by Grow My Business, stranica je na Bricks temi s AVIF slikama i Rank Mathom, znaci nedavno radjena od agencije. Uz to formular vec ima uvjetna pitanja po usluzi i lokaciji, pa redizajn ne bi bio vidljivo bolji.",
+  "one_liner": "Sljedeci: Scott Carlton. Vlasnik Carlton Landscapes u Wellingtonu, landscaping i odrzavanje vrtova. Loom fokusiraj na pozive koji dodju dok je na terenu s rukama u zemlji.",
+  "summary": [
+    "Carlton Landscapes, Wellington, 7 godina. Landscaping (sadnja, navodnjavanje, ograde, staze, travnjaci, potporni zidovi) i odrzavanje vrtova (zivice, rezidba, malc, uklanjanje stabala, pranje pod tlakom).",
+    "Pokriva Wellington, Kapiti, Upper i Lower Hutt, Wairarapa. 45 Google recenzija s 5.0 prema Builderscracku.",
+    "Scott je vlasnik i radi na terenu s timom, recenzije ga hvale da dobro komunicira."
+  ],
+  "observed_on_site": [
+    "Jedini broj je mobitel +64 22 355 4133, jedini mail carlton.gardening@gmail.com.",
+    "Radno vrijeme nije navedeno nigdje.",
+    "Nema live chata ni online bookinga.",
+    "Kontakt formular (Gravity Forms) ima lokaciju i vrstu usluge s uvjetnim podopcijama, telefon je neobavezan.",
+    "Na naslovnici dva testimoniala bez ocjene. 45 Google recenzija s 5.0 nije prikazano nigdje.",
+    "12 projekata s before/after fotkama pod Our Work.",
+    "Footer: Created by Grow My Business."
+  ],
+  "offer": "Missed call text-back: kad Scott ne stigne javiti se jer je na poslu, pozivatelj odmah dobije SMS s linkom za upit i termin procjene.",
+  "hook_type": "missed_calls",
+  "hook_line": "Tvoj jedini broj je mobitel, a ti si vecinu dana na terenu. Svaki poziv koji ne stignes javiti ide sljedecem vrtlaru na Googleu.",
+  "tech_stack": ["WordPress", "Gravity Forms", "Google Analytics 4", "Rank Math"],
+  "opener": "Scott, quick one. The only number on the site is your mobile and you are on jobs most of the day. When you miss a call mid-job, does anything go back to that person, or do they just try the next landscaper?",
+  "video_beats": [
+    "0-10s: carltonlandscapes.co.nz na ekranu, Scottovo ime. Tvrdnja: jedini broj je tvoj mobitel, a ti si na terenu.",
+    "10-20s: pokazi header s brojem i kontakt stranicu bez radnog vremena.",
+    "20-65s: rezultat. Propusten poziv, pozivatelj za par sekundi dobije SMS od Carlton Landscapes s linkom na kratki upit, Scott dobije sazetak. Par sekundi canvas.",
+    "65-90s: CTA. Mogu ti to spojiti na postojeci broj za tjedan dana probe."
+  ],
+  "show_on_their_site": [
+    {"what": "Naslovna, header s mobitelom i dva testimoniala bez ocjene", "url": "https://www.carltonlandscapes.co.nz/"},
+    {"what": "Kontakt, samo mobitel i gmail, nema radnog vremena", "url": "https://www.carltonlandscapes.co.nz/contact/"}
+  ],
+  "website_demo": {
+    "why": "",
+    "current_site_problems": [],
+    "pages_to_build": [],
+    "ai_widget": "",
+    "inquiry_flow": "",
+    "seo_fixes": [],
+    "brand_risk": "agency_in_contract",
+    "demo_url": "",
+    "demo_status": "todo"
+  },
+  "workflows": [
+    {"id": "v0ROCZp3Rj4UogWj", "why": "Voice sekretar koji se javi kad Scott ne moze, pita sto treba i gdje, i upise procjenu u kalendar."}
+  ],
+  "workflow_gap": {"what_to_show": "SMS koji pozivatelj dobije odmah nakon propustenog poziva, s linkom na kratki upit", "n8n_search": "missed call text back twilio"},
+  "language": "en",
+  "dm": "Scott, had a look at the Carlton Landscapes site. Only number is your mobile, and you are on jobs most of the day. Random message, I know. I recorded 90 seconds showing a missed call turning into a text back and a booked quote visit. Made it just for you. [loom] Andrew",
+  "permission_dm": "",
+  "followup_viewed": "Scott, saw you watched it. Happy to hook it up to your number for a week so you can see what it catches while you are on site. Worth trying?",
+  "followup_not_viewed": "Scott, bumping this in case it got buried. 90 seconds on what happens to calls you miss while you are on a job. If it is not useful just say and I will leave you be.",
+  "avoid": [
+    "Ne nuditi redizajn, stranicu je nedavno radila agencija Grow My Business.",
+    "Ne kritizirati formular, vec ima uvjetna pitanja.",
+    "Ne izmisljati koliko poziva propusta. Imamo samo cinjenicu da je jedini broj mobitel.",
+    "Ne brkati ga s Carlton Landscape iz SAD-a ili Kanade."
+  ],
+  "sources": [
+    "https://www.linkedin.com/in/scott-carlton-ab9616a0/",
+    "https://builderscrack.co.nz/tradies/50lzx5cs/carlton-landscapes",
+    "https://www.facebook.com/CarltonLandscape/",
+    "https://www.carltonlandscapes.co.nz/",
+    "https://www.carltonlandscapes.co.nz/contact/"
+  ]
+}

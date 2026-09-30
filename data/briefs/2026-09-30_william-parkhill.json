@@ -1,0 +1,53 @@
+{
+  "name": "William Parkhill",
+  "linkedin_url": "https://www.linkedin.com/in/william-parkhill-562862326",
+  "role": "Direktor i suvlasnik",
+  "company": "Coolfast Installations Ltd",
+  "company_website": "",
+  "location": "Oldington, Bridgnorth, Shropshire, UK",
+  "vertical": "hvac",
+  "identity_confidence": "medium",
+  "identity_note": "Companies House potvrdjuje: Coolfast Installations Ltd (16256293), osnovana 17.2.2025, direktori William Thomas Parkhill i Holly Parkhill, SIC 33200 instalacija industrijskih strojeva i opreme, charge prema Mitsubishi HC Capital (financiranje opreme). Firma nema stranicu koju sam mogao naci. PAZI: coolfast.co.uk je DRUGA firma, Coolfast Ltd iz Hertfordshirea s direktorima Daryl Lee i Tobie Mitchell. Na LinkedIn profilu provjeri radi li domaci air con, komercijalnu hladnjacu ili je podizvodjac drugim firmama.",
+  "tier": "B",
+  "tier_reason": "Vlasnik mlade instalaterske firme u hladjenju, sto je blizu HVAC ICP-a, ali ne znam radi li za krajnje kupce ili kao podizvodjac, i nema stranice na kojoj bi se vidio propust.",
+  "asset_type": "n8n_loom",
+  "asset_reason": "Pravilo 2, tier B. Uz to identitet je medium i nema stranice s materijalom za demo (pravilo 3).",
+  "one_liner": "Sljedeci: William Parkhill. Direktor Coolfast Installations iz Bridgnortha, hladjenje i klima, firma osnovana 2025. Ne snimaj, prvo opener pa permission DM.",
+  "summary": [
+    "Coolfast Installations Ltd, Bridgnorth, osnovana veljaca 2025. Direktori William i Holly Parkhill.",
+    "Registrirana djelatnost je instalacija industrijske opreme, financiranje opreme preko Mitsubishi HC Capitala.",
+    "Nema stranice ni vidljivih recenzija. LinkedIn profil ima malo konekcija, znaci ne koristi ga puno."
+  ],
+  "observed_on_site": [
+    "Nisam nasao stranicu firme. Pretraga vraca samo coolfast.co.uk, koja pripada drugoj firmi."
+  ],
+  "offer": "Speed-to-lead i voice sekretar da mlada instalaterska firma ne propusta upite dok su oboje na terenu.",
+  "hook_type": "missed_calls",
+  "hook_line": "Firma je stara godinu i pol, nema stranice, a kad netko googla Coolfast dobije drugu firmu iz Hertfordshirea.",
+  "tech_stack": [],
+  "opener": "William, random one. When someone googles Coolfast they land on a different Coolfast in Hertfordshire. Is most of your work coming through contractors you already know, or are you trying to get direct customers too?",
+  "video_beats": [],
+  "show_on_their_site": [],
+  "workflows": [
+    {"id": "v0ROCZp3Rj4UogWj", "why": "Voice sekretar koji se javi kad su na instalaciji i upise posao, za malu firmu bez ureda."},
+    {"id": "zmWzs6Eymm0BehhY", "why": "Upit se kvalificira i dobije termin procjene bez da itko sjedi za telefonom."}
+  ],
+  "workflow_gap": {"what_to_show": "", "n8n_search": ""},
+  "language": "en",
+  "dm": "",
+  "permission_dm": "William, saw Coolfast Installations started last year. I build the bit that answers calls and enquiries for small install teams while they are on site. Happy to record 90 seconds showing what that would look like for you. Want me to send it? Andrew",
+  "followup_viewed": "",
+  "followup_not_viewed": "William, no worries if the timing is off. If you ever want direct customers finding you instead of the other Coolfast, happy to help. Andrew",
+  "avoid": [
+    "Ne brkati s Coolfast Ltd i coolfast.co.uk, to je druga firma.",
+    "Ne kritizirati da nema stranicu, firma je nova.",
+    "Ne spominjati Mitsubishi HC Capital charge ni Companies House detalje, zvuci kao njuskanje.",
+    "Ne snimati Loom prije nego odgovori."
+  ],
+  "sources": [
+    "https://www.linkedin.com/in/william-parkhill-562862326/",
+    "https://find-and-update.company-information.service.gov.uk/company/16256293",
+    "https://find-and-update.company-information.service.gov.uk/company/16256293/officers",
+    "https://find-and-update.company-information.service.gov.uk/company/12496861/officers"
+  ]
+}

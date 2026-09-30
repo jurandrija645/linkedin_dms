@@ -1,0 +1,49 @@
+{
+  "name": "Rabih Hamid",
+  "linkedin_url": "https://www.linkedin.com/in/rabih-hamid",
+  "role": "Co-Founder i CTO",
+  "company": "Maxairea",
+  "company_website": "https://www.maxairea.com/",
+  "location": "Wageningen, Nizozemska",
+  "vertical": "b2b_saas",
+  "identity_confidence": "high",
+  "identity_note": "WUR clanak o startupima za Wageningen Impact Expo navodi Rabiha Hamida kao co-foundera i CTO-a Maxairee, uz co-foundera Williama Janssena koji dolazi iz ventilacijske industrije.",
+  "tier": "C",
+  "tier_reason": "Deep-tech startup u fazi komercijalne validacije (CO2 filtracija za HVAC u poslovnim zgradama), a on je CTO, ne prodaja. Nema homeowner upita ni klasicnog inbound problema. Peer founder DM, bez videa.",
+  "asset_type": "none",
+  "asset_reason": "Pravilo 1, tier C.",
+  "one_liner": "Sljedeci: Rabih Hamid. CTO i suosnivac Maxairee iz Wageningena, CO2 filtracija za HVAC. Bez videa, kratak founder-to-founder DM.",
+  "summary": [
+    "Maxairea filtrira CO2 iz dovodnog zraka pa HVAC treba manje vanjskog zraka. Ciljaju urede, hotele, skole, kina, trgovacke centre.",
+    "Jedna ziva instalacija (TEMA Fine Food, Cuijk, energetski razred G na C), SPIE ured u optimizaciji, demo u The Green Villageu u Delftu u listopadu 2026 i u policijskoj postaji Bisonspoor.",
+    "Rabih je inzenjer s 10 godina u gradjevini, Maxairea mu je treca firma. Komercijalu vodi William Janssen."
+  ],
+  "observed_on_site": [
+    "CTA na stranici: Schedule a 15-min call i besplatna procjena zgrade.",
+    "Kontakt info@maxairea.com i formular.",
+    "Svi projekti su u Nizozemskoj."
+  ],
+  "offer": "",
+  "hook_type": "outbound_pipeline",
+  "hook_line": "",
+  "tech_stack": [],
+  "opener": "",
+  "video_beats": [],
+  "show_on_their_site": [],
+  "workflows": [],
+  "language": "en",
+  "dm": "Rabih, the TEMA result from G to C on the energy label is a strong first proof point. I run a small AI agency and mostly build outbound and lead handling for HVAC and energy companies. Curious how you are finding the first facility managers outside your network. Andrew",
+  "permission_dm": "",
+  "followup_viewed": "",
+  "followup_not_viewed": "Rabih, no pressure on this. If outbound to building owners ever becomes William's headache, happy to compare notes on what works for HVAC. Andrew",
+  "avoid": [
+    "Ne slati Loom ni pitch. Startup je, i on je CTO.",
+    "Ne nuditi inbound sekretara ni redizajn, nemaju taj problem.",
+    "Ne ponavljati njihove brojke (30%, 50%) kao nase tvrdnje."
+  ],
+  "sources": [
+    "https://www.wur.nl/en/newsarticle/startup-cases-for-wageningen-impact-expo.htm",
+    "https://www.maxairea.com/",
+    "https://tracxn.com/d/companies/maxairea/__aYnBCm3a_PZofvMsMZ8aS2TUrh0bGnwO5nD34M3wkrk"
+  ]
+}

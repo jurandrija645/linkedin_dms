@@ -1,0 +1,94 @@
+{
+  "name": "Fabricio Cordoba",
+  "linkedin_url": "https://www.linkedin.com/in/fabricio-cordoba-55657136",
+  "role": "CEO i osnivac",
+  "company": "Alfresco Air",
+  "company_website": "https://alfrescoair.com/",
+  "location": "Miami, Florida, SAD",
+  "vertical": "hvac",
+  "identity_confidence": "high",
+  "identity_note": "Florida DBPR licenca: Cordoba, Fabricio, Doing Business As Alfresco Air, Certified Air Conditioning Contractor. Stranica ga navodi kao CEO & Founder, Facebook video firme ga zove President. alfresco-air.com radi 301 na alfrescoair.com.",
+  "tier": "A",
+  "tier_reason": "Osnivac i licencirani nositelj HVAC firme u Miamiju s 12 ljudi u timu, sam odlucuje. Kontakt formular je ime, mail, poruka, nema chata ni bookinga, a radi komercijalne sustave gdje je svaki upit velik posao.",
+  "asset_type": "website_demo",
+  "asset_reason": "Pravilo 4. Osnivac, identitet high, samostalna firma pod vlastitom licencom. Stranica je moderna vizualno, ali fali joj sve s liste: nema bookinga, formular ima tri polja bez kvalifikacije, nema chata, recenzije s ocjenom nisu na naslovnici (samo BBB A+ logo), nema stranica po gradovima ni spanjolske verzije u Miamiju. Agencijskog potpisa u footeru nema.",
+  "one_liner": "Sljedeci: Fabricio Cordoba. CEO i osnivac Alfresco Aira u Miamiju, HVAC za kondominije, high-rise i komercijalu. Loom fokusiraj na redizajn s inquiry flowom za property managere i dvojezicnim asistentom.",
+  "summary": [
+    "Alfresco Air, Miami, Miami-Dade i Broward. Residential i komercijalni HVAC, sve vise kondominiji i high-rise: chilleri, rashladni tornjevi, RTU, DOAS, retrofiti central plantova. Rade s AAON, Trane, Rheem, Bosch, LG.",
+    "12 ljudi na Our Team stranici, 9 projekata na stranici. BBB A+, 4.5 iz 51 recenzije prema agregatorima.",
+    "Fabricio je osnivac i nositelj licence. Na LinkedInu objavljuje projekte (helikopterski lift opreme s Castle Group) i pohvale timu."
+  ],
+  "observed_on_site": [
+    "Moderna stranica s videom, navigacija About, Our Team, Services, Projects, Contact Us.",
+    "Kontakt formular ima samo your-name, your-email, your-message (Contact Form 7).",
+    "Nema live chata ni online bookinga.",
+    "Na naslovnici BBB A+ i Readers Choice Diamond logo, ali bez ocjene i bez ijedne recenzije.",
+    "Nema spanjolske verzije iako je firma u Miamiju.",
+    "Nema stranica po gradovima, samo Miami.",
+    "Radno vrijeme nije na naslovnici. Telefon (786) 515-5362.",
+    "Nema analitike ni pracenja poziva u kodu."
+  ],
+  "offer": "Redizajnirana stranica koja je vec napravljena i hostana: inquiry flow za property managere i HOA (tip zgrade, sustav, problem, hitnost), dvojezicni AI asistent i lokalne stranice za Miami-Dade i Broward.",
+  "hook_type": "speed_to_lead",
+  "hook_line": "Radite chillere i rashladne tornjeve za high-rise zgrade, a property manager kojem stane sustav na stranici dobije tri polja: ime, mail, poruka.",
+  "tech_stack": ["WordPress", "Elementor", "Contact Form 7"],
+  "opener": "",
+  "video_beats": [
+    "0-10s: alfrescoair.com na ekranu, Fabricijevo ime. Tvrdnja: radite chillere za high-rise, a property manager kojem stane sustav dobije formular s tri polja.",
+    "10-20s: prebaci na demo. Reci da je koncept napravljen na temelju njegove javne stranice, da je ziv i da je link u poruci.",
+    "20-45s: ispuni inquiry flow uzivo. Tip zgrade (kuca, kondominij, high-rise, komercijala), sustav (split, RTU, chiller, cooling tower), problem, hitnost, broj jedinica, termin.",
+    "45-70s: AI asistent uzivo. Pitaj ga o retrofitu chillera na engleskom, pa na spanjolskom o kucnoj klimi koja ne hladi.",
+    "70-90s: CTA. Jedna recenica o stranicama za Brickell, Doral, Coral Gables i Fort Lauderdale. Pitanje zeli li ga na svojoj domeni."
+  ],
+  "show_on_their_site": [
+    {"what": "Naslovna, BBB logo bez ijedne recenzije i bez chata", "url": "https://alfrescoair.com/"},
+    {"what": "Contact Us, formular s tri polja", "url": "https://alfrescoair.com/contact-us/"},
+    {"what": "Projects, dobar materijal koji stranica ne pretvara u upite", "url": "https://alfrescoair.com/"}
+  ],
+  "website_demo": {
+    "why": "Firma se pomice prema komercijalnim i high-rise poslovima gdje je svaki upit velik, a stranica sve upite svodi na tri polja. Osnivac je i sam odlucuje. Materijala ima dosta: tim, projekti, video, logo, brendovi s kojima rade.",
+    "current_site_problems": [
+      "Kontakt formular ima samo ime, mail i poruku, nema pitanja o tipu zgrade, sustavu ni hitnosti.",
+      "Nema live chata ni nacina da se javi izvan radnog vremena, iako direktoriji navode 24/7 servis.",
+      "Nema online bookinga za servis ni procjenu.",
+      "Recenzije s ocjenom nisu nigdje na stranici, samo BBB A+ logo.",
+      "Nema spanjolske verzije u Miamiju.",
+      "Nema stranica po gradovima ni po kvartovima."
+    ],
+    "pages_to_build": ["home", "residential AC", "commercial i high-rise", "chillers i cooling towers", "request service", "projects", "Miami", "Brickell", "Doral", "Coral Gables", "Fort Lauderdale", "reviews"],
+    "ai_widget": "Odgovara na pitanja o kucnim klimama, RTU, chillerima, rashladnim tornjevima i retrofitima, pita tip zgrade i hitnost, kod hitnog kvara uzme podatke za povratni poziv, inace ponudi termin. Radi na engleskom i spanjolskom.",
+    "inquiry_flow": "Tip objekta (kuca, kondominij, high-rise, poslovni prostor), sustav (split, RTU, chiller, cooling tower, ne znam), problem (ne hladi, buka, curenje, zamjena, odrzavanje), hitnost, broj jedinica ili katova, adresa, termin, pa potvrda i Fabriciju sazetak.",
+    "seo_fixes": [
+      "Zasebne stranice za Miami, Brickell, Doral, Coral Gables i Fort Lauderdale",
+      "Stranice za commercial HVAC i chiller service Miami",
+      "HVACBusiness schema s licencom i podrucjem",
+      "Spanjolska verzija kljucnih stranica",
+      "Stvarne recenzije s ocjenom na naslovnici",
+      "Google Analytics i pracenje poziva, trenutno nema nicega"
+    ],
+    "brand_risk": "none",
+    "demo_url": "",
+    "demo_status": "todo"
+  },
+  "workflows": [],
+  "language": "en",
+  "dm": "Fabricio, you do chillers and cooling towers for high-rises and the site still asks a property manager for name, email and message. No chat, no Spanish in Miami. Random message, I know. I rebuilt it as a concept and put it online, you can click it. Made it just for you. [loom] [demo] Andrew",
+  "permission_dm": "",
+  "followup_viewed": "Fabricio, saw you watched it. Want me to point the demo at your domain for a week and see what building managers do with it? Nothing to sign, and if it does nothing I take it down.",
+  "followup_not_viewed": "Fabricio, trying once more in case this got buried. I rebuilt your site as a concept, it is live, and the video walks through the new request flow for building managers. If it is not a fit just say so and I will stop.",
+  "avoid": [
+    "Nikad ne reci ni natukni da je demo njegova stranica. Uvijek koncept na temelju javne stranice.",
+    "Ne govoriti da je stranica ruzna. Vizualno je moderna, problem je sto ne hvata upite.",
+    "Ne izmisljati recenzije. Ako se prikazuju, samo stvarne uz izvor.",
+    "Ne pretpostavljati da govori spanjolski. Spanjolska verzija je zbog trzista.",
+    "Ne izmisljati koliko vrijedi prosjecan komercijalni posao."
+  ],
+  "sources": [
+    "https://www.linkedin.com/in/fabricio-cordoba-55657136/",
+    "https://www.myfloridalicense.com/LicenseDetail.asp?SID=&id=806DDFAC4DDB6E3F8EBEA8ED7A1FDC3E",
+    "https://alfrescoair.com/",
+    "https://alfrescoair.com/contact-us/",
+    "https://www.bbb.org/us/fl/miami/profile/air-conditioning-contractor/alfresco-air-0633-92011348",
+    "https://www.yelp.com/biz/alfresco-air-miami"
+  ]
+}

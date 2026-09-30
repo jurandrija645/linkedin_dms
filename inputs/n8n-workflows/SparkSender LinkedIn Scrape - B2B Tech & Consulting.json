@@ -1,0 +1,1198 @@
+{
+  "name": "SparkSender LinkedIn Scrape - B2B Tech & Consulting",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        3440,
+        688
+      ],
+      "id": "fdd7f938-e0b5-4df0-8f51-a2e59fefe4c2",
+      "name": "Wait",
+      "webhookId": "5f2a447d-2df2-4fe5-88c3-27715cff452c",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "options": {
+          "reset": false
+        }
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        352,
+        544
+      ],
+      "id": "48972d17-580f-49ad-91b4-0eacd9b7d9be",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.leadmagic.io/profile-search",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "X-API-Key",
+              "value": "274f5a256ad6ff6d5dc0ac40a84e18ba"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "profile_url",
+              "value": "={{ $json.linkedin_url }}"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1328,
+        672
+      ],
+      "id": "5c77a8dc-7cdc-432b-9172-0b9cb0f47f8a",
+      "name": "Request LinkedIn Profile",
+      "executeOnce": false,
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1TzYVYXETV86cld51PArdkkZmDAC9l7Db5mVsHzhkZBM",
+          "mode": "list",
+          "cachedResultName": "B2B Tech & Consulting - EST&CST - 11-20 & 100-200 emp",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1TzYVYXETV86cld51PArdkkZmDAC9l7Db5mVsHzhkZBM/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1354379706,
+          "mode": "list",
+          "cachedResultName": "EmailMessages",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1TzYVYXETV86cld51PArdkkZmDAC9l7Db5mVsHzhkZBM/edit#gid=1354379706"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ps": "={{ $('5 Column Personalization').item.json.message.content.ps }}",
+            "IcebreakerFunFact": "={{ $('5 Column Personalization').item.json.message.content.icebreakerFunFact }}",
+            "IcebreakerPosition": "={{ $('5 Column Personalization').item.json.message.content.icebreakerPosition }}",
+            "IcebreakerCompanyInfo": "={{ $('5 Column Personalization').item.json.message.content.icebreakerCompanyInfo }}",
+            "companyNickname": "={{ $('5 Column Personalization').item.json.message.content.companyNickname }}",
+            "elevatorPitch": "={{ $('5 Column Personalization').item.json.message.content.elevatorPitch }}",
+            "cta": "={{ $('5 Column Personalization').item.json.message.content.cta }}",
+            "icebreakerLonger": "={{ $('5 Column Personalization').item.json.message.content.icebreakerLonger }}",
+            "icebreakerShorter": "={{ $('5 Column Personalization').item.json.message.content.icebreakerShorter }}",
+            "subjectLine2": "={{ $('5 Column Personalization').item.json.message.content.subjectLine2 }}",
+            "subjectLine": "={{ $('5 Column Personalization').item.json.message.content.subjectLine }}",
+            "country": "={{ $('Get leads').item.json.person_country }}",
+            "location": "={{ $('Get leads').item.json.company_city }}, {{ $('Get leads').item.json.person_state }}",
+            "company_linkedin_url": "={{ $('Get leads').item.json.organization_linkedin_url }}",
+            "company_website": "={{ $('Get leads').item.json.organization_website_url }}",
+            "company_industry": "={{ $('Get leads').item.json.industry }}",
+            "company_size": "={{ $('Get leads').item.json.employee_size }}",
+            "company_name": "={{ $('Get leads').item.json.company_name }}",
+            "headline": "={{ $('Get leads').item.json.title }}",
+            "fullName": "={{ $('Get leads').item.json.first_name }} {{ $('Get leads').item.json.last_name }}",
+            "lastName": "={{ $('Get leads').item.json.last_name }}",
+            "firstName": "={{ $('Get leads').item.json.first_name }}",
+            "profileUrl": "={{ $('Get leads').item.json.linkedin_url }}",
+            "email": "={{ $('Get leads').item.json.email }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "profileUrl",
+              "displayName": "profileUrl",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "firstName",
+              "displayName": "firstName",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "lastName",
+              "displayName": "lastName",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "fullName",
+              "displayName": "fullName",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "publicIdentifier",
+              "displayName": "publicIdentifier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "headline",
+              "displayName": "headline",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "userSkills",
+              "displayName": "userSkills",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company_name",
+              "displayName": "company_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company_size",
+              "displayName": "company_size",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company_industry",
+              "displayName": "company_industry",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company_linkedin_url",
+              "displayName": "company_linkedin_url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company_website",
+              "displayName": "company_website",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "connections",
+              "displayName": "connections",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "followers",
+              "displayName": "followers",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "urn",
+              "displayName": "urn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "country",
+              "displayName": "country",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "location",
+              "displayName": "location",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "profilePic",
+              "displayName": "profilePic",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "subjectLine",
+              "displayName": "subjectLine",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "subjectLine2",
+              "displayName": "subjectLine2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "icebreakerShorter",
+              "displayName": "icebreakerShorter",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "icebreakerLonger",
+              "displayName": "icebreakerLonger",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "elevatorPitch",
+              "displayName": "elevatorPitch",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "cta",
+              "displayName": "cta",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ps",
+              "displayName": "ps",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "companyNickname",
+              "displayName": "companyNickname",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IcebreakerCompanyInfo",
+              "displayName": "IcebreakerCompanyInfo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IcebreakerPosition",
+              "displayName": "IcebreakerPosition",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IcebreakerFunFact",
+              "displayName": "IcebreakerFunFact",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        3248,
+        688
+      ],
+      "id": "fef42e43-3b85-4cd5-9d4a-2eff39627c68",
+      "name": "Add Row",
+      "executeOnce": false,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "keO2ZnqXodOYHnvb",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-5.1",
+          "mode": "list",
+          "cachedResultName": "GPT-5.1"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You're a helpful, intelligent writing assistant. You write engaging outreach email messages that get sent to B2B Tech companies owners/founders.",
+              "role": "system"
+            },
+            {
+              "content": "=Your task is to personalize an email. This email will be sent to a B2B Tech company owner in USA\n\nYou'll do this by taking, as input, a prospect LinkedIn profile, and then editing 8 templates for different sections of the email: companyNickName, subject line, subject line two, icebreakerLonger, iceBreakerShorter, elevatorPitch, CTA and a PS field.\n\nYour templates are below.\n\nCompany Nickname: short company name. If the names is \"Valmedia LLC\" the company nickname is \"Valmedia\". If the name is \"Conveyor Solutions\" the companyNickaname can be \"Conveyor\".\n\nSubject Line: “{theirCity} + {somethingFromTheirLastPost OR somethingPersonalToThem} + {companyNickname}”\n\nSubject Line Two: write short email subject line, rooted in a real detail from the prospect’s world, and free of “businessy” \nbuzzwords. Write in a genuine personal detail (city, recent post, hobby) or mention their ideal clients.\n\nIcebreaker: -> \"That post about {somethingInterestingFromTheirPost}, really hit home. I also {identifyWithSomethingFromTheirPost}.\" --- OR if they don't have any text in their LinekedIn post: -> \"I see that you {somethingPersonalToThem}, I also {identifyWithThem}.\"\n\nIcebreakerCompanyInfo: -> \"{The way|I love how|Its cool to see how -> Choose RANDOM} you are {thingTheyAreDoing} at {companyNickname}. Its impressive to see {somethingInterestingAboutTheirCompanyHistory or theirPositionInTheCompany}.\"\n\nIcebreakerFunFact: -> \"{The fact that|Its cool to see -> choose RANDOM option} {companyNickname} has {mentionTheFunFact}\"\n\nIcebreakerPosition: -> \"{I saw|Pretty unique|Saw| -> choose RANDOM} that you are {thingTheyAreDoing} at {companyNickname}.\"\n\nElevatorPitch: -> \"{Anyways, figured I'd reach out|Wanted to reach out -> Choose RANDOM} because I saw you guys at {companyNickname} mostly do {thingTheirCompanyDoes}\"\n\nCTA: -> \"{My team and I|Me and my team -> Choose RADNOM} {developed|built} an Ai {Agent|System} that can find and contact {idealDecisionMakersTheyWantToTarget} at {shortDescriptionOfTheirIdealClientCompanyProfile}\"\n\nPS: \"If you dont have a need for {theirClientNiche} clients, let me know and I'll step back.\"\n\nNOTE: Notice that you have choices for starting each part with {option1|option2}, choose one of the provided options COMPLETELY RANDOM, or provide another option yourself. I am running this prompt for each prospect and i want different variations of sentences.\n\nGuidelines:\n1. a) For the icebreakerShorter, make sure that there is about 20-40 words (two sentences), not more, we need to make sure we connect with the prospect. IcebreakerPosition is just one sentence, add time component if available. For the icebreakerLonger make sure that there is about 50-70 words (three sentences). Also you can mention time in the icebreaker if the post is from a long time ago (eg: I saw your LinkedIn post from 2 years ago). 1. b) If you do not get any text for the LinkedIn Post, do not mention the post in the icebreaker, but rather something from the prospects LinkedIn profile and about section.\n1. c) If the post is reshared/reposted and not posted by the prospect make sure to mention that in the icebreaker (eg. \"I saw that last post you reposted from John Simmons\").\n1. d) Make sure NOT to start the icebreaker with \"I read OR I checked out OR I came across OR That LinkedIn post\" this SCREAMS cold email, be creative and innovative, and compliment the person in the icebreaker. You dont need to mention their name.\n1. e) If there is an image in the post and you can see it, prioritize commenting on that image. \n2. Your tone of voice should be \"casual bar conversation\" and very spartan. No fancy language. No business jargon, just simple english.\n3. Look for plausible (but vague) connections wherever possible.\n4. Do not just repeat data from LinkedIn verbatim. Paraphrase, so they think a human wrote it.\n5. Make sure the subject line is non-capitalized, even if it's grammatically incorrect. This makes the email seem \nhuman.\n6. Avoid using email spam words especially: \"action\", \"now\", \"today\", \"guarantee\", \"free\", \"request\", \"new\", \"investment\", \"all\", \"get\", \"investment\".\n7. Stick to above structure of email and use the words that are inside, just change the variable parts.\n8. Respond in JSON using this format:\n\n{\"companyNickname\":\"\",\"subjectLine\":\"\",\"subjectLine2\":\"\",\"icebreakerShorter\":\"\",\"icebreakerLonger\":\"\",\"icebreakerPosition\":\"\", \"icebreakerFunFact\":\"\", \"icebreakerCompanyInfo\":\"\", \"ps\":\"\", \"elevatorPitch\":\"\", \"cta\":\"\"}\n\n--------\n\nInput Data Example:\n\nValmedia LLC is a company in Stockholm that does Salesforce implementation and consulting. The person we are contacting has a post about their cat Garfield that only plays with green toys.\n\nEmail Example:\n\ncompanyNickname: \"Valmedia\"\nSubjectLine : \"StockHolm + Garfields favourite play toy + Valmedia\"\nSubjectLine2: \"Quick thought about your recent Garfield post\"\nIcebreakerShorter: \"I read your post about your pet Garfield and his toy choice. I also have a dog Milo that has similar condition. Glad I found someone with the same problem.\"\nIcebreakerLonger \"I read your Linkedin post about how your pet Garfield only plays with green toys. I also have a dog Milo that plays only with orange toys. Interesting stuff, maybe it is connected to how animals see colors in a different way. Makes you think.\"\nElevatorPitch: \"Anyways, figured I'd reach out because I saw you guys at Valmedia mostly do Salesforce implementation and consulting for tech companies\"\nCTA: \"My team and I developed an AI Agent that can find and contact owners at medium sized companies that have a need to manage their sales teams\"\nPS: \"If you dont have a need for more tech clients right now let me know and I'll step back\"\n"
+            },
+            {
+              "content": "=**Prospect Profile Information:**\n- Name: {{ $('Get leads').item.json.first_name }} {{ $('Get leads').item.json.last_name }}\n- Headline: {{ $('Get leads').item.json.title }}\n- Company: {{ $('Get leads').item.json.company_name }}\n- Location: {{ $('Get leads').item.json.person_city }}, {{ $('Get leads').item.json.person_state }}\n- About Section: {{ $('Request LinkedIn Profile').item.json.bio }}\n- Country: \n- Experiences: {{ $('Request LinkedIn Profile').item.json.work_experience }}\n- Educations: {{ $('Request LinkedIn Profile').item.json.education }}\n- Interests: \n- Skills: \n- About their company: {{ $json.choices[0].message.content }}\nProspect Last LinkedIn Post: {{ $('Request LinkedIn Posts').item.json.text }} - Author of the post: {{ $('Request LinkedIn Posts').item.json.author }} - Posted at: {{ $('Request LinkedIn Posts').item.json.posted_at }} - Image: {{ $('Request LinkedIn Posts').item.json.media.images[0].url }}"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.6,
+      "position": [
+        2640,
+        688
+      ],
+      "id": "653b1f52-6c9d-4f35-ae32-c21c542d32d4",
+      "name": "5 Column Personalization",
+      "credentials": {
+        "openAiApi": {
+          "id": "32KT8gO87t4GoFVd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -448,
+        304
+      ],
+      "id": "890b7028-1110-4853-b404-dbae63d29d29",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1TzYVYXETV86cld51PArdkkZmDAC9l7Db5mVsHzhkZBM",
+          "mode": "list",
+          "cachedResultName": "B2B Tech & Consulting - EST&CST - 11-20 & 100-200 emp",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1TzYVYXETV86cld51PArdkkZmDAC9l7Db5mVsHzhkZBM/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1174214568,
+          "mode": "list",
+          "cachedResultName": "Verified",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1TzYVYXETV86cld51PArdkkZmDAC9l7Db5mVsHzhkZBM/edit#gid=1174214568"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "status",
+              "lookupValue": "WAITING"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -128,
+        544
+      ],
+      "id": "ac33893a-96e1-43ec-a474-ce393a547e7e",
+      "name": "Get leads",
+      "alwaysOutputData": false,
+      "notesInFlow": false,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "keO2ZnqXodOYHnvb",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "formTitle": "Pokreni LinkedIn Scrape",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Write something"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -448,
+        544
+      ],
+      "id": "f8630e76-3c2c-4350-9979-56bbf7219390",
+      "name": "On form submission",
+      "webhookId": "5716a94f-980b-4313-b6c1-6d550ca04d5b"
+    },
+    {
+      "parameters": {
+        "maxItems": 5
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        112,
+        544
+      ],
+      "id": "50e002e1-031a-492c-9b12-bf9b79dbd9d3",
+      "name": "Limit",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apimaestro~linkedin-profile-posts/run-sync-get-dataset-items?token=YOUR_APIFY_TOKEN",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"limit\": 1,\n    \"username\": \"{{ $('Get leads').item.json.linkedin_url }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        944,
+        208
+      ],
+      "id": "297e8c82-988d-4a45-a282-f76956fedd90",
+      "name": "Request LinkedIn Posts"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4eb1cebc-ced4-498e-8d58-1090adc3df6e",
+              "leftValue": "={{ $json.text }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1184,
+        208
+      ],
+      "id": "46587917-354b-4757-8392-fd806ff54380",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e43fb206-2801-4db8-8b1d-8c229032fa22",
+              "name": "PostInfo",
+              "value": "No LinkedIn Post  found",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1440,
+        320
+      ],
+      "id": "59ec7e39-213a-41e6-8a36-afbe8c99bcbd",
+      "name": "Set \"No Posts\" message"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8cdd69dc-4b1c-46d4-b994-71a9bc9b1fc6",
+              "name": "PostInfo",
+              "value": "={{ $('Request LinkedIn Posts').item.json.toJsonString() }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1440,
+        112
+      ],
+      "id": "1f927a18-47ee-42d4-b735-240f02ad933f",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        2000,
+        688
+      ],
+      "id": "b6c43b27-e987-4284-a4bd-f8dc381c3b8c",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1TzYVYXETV86cld51PArdkkZmDAC9l7Db5mVsHzhkZBM",
+          "mode": "list",
+          "cachedResultName": "B2B Tech & Consulting - EST&CST - 11-20 & 100-200 emp",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1TzYVYXETV86cld51PArdkkZmDAC9l7Db5mVsHzhkZBM/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1174214568,
+          "mode": "list",
+          "cachedResultName": "Verified",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1TzYVYXETV86cld51PArdkkZmDAC9l7Db5mVsHzhkZBM/edit#gid=1174214568"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "email": "={{ $('Get leads').item.json.email }}",
+            "status": "DONE"
+          },
+          "matchingColumns": [
+            "email"
+          ],
+          "schema": [
+            {
+              "id": "apollo_id",
+              "displayName": "apollo_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "first_name",
+              "displayName": "first_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "last_name",
+              "displayName": "last_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "personal_email",
+              "displayName": "personal_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "phone_numbers",
+              "displayName": "phone_numbers",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "linkedin_url",
+              "displayName": "linkedin_url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company_name",
+              "displayName": "company_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "domain",
+              "displayName": "domain",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "employee_size",
+              "displayName": "employee_size",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "organization_phone",
+              "displayName": "organization_phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "industry",
+              "displayName": "industry",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "person_city",
+              "displayName": "person_city",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "person_state",
+              "displayName": "person_state",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "person_country",
+              "displayName": "person_country",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "org_founded",
+              "displayName": "org_founded",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company_city",
+              "displayName": "company_city",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company_state",
+              "displayName": "company_state",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company_country",
+              "displayName": "company_country",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "organization_website_url",
+              "displayName": "organization_website_url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "organization_linkedin_url",
+              "displayName": "organization_linkedin_url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        3024,
+        688
+      ],
+      "id": "ebd75e21-e973-4bf5-8ee4-d4021a31e755",
+      "name": "Mark row as done",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "keO2ZnqXodOYHnvb",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "messages": {
+          "message": [
+            {
+              "content": "You are a research assistant. Given a company URL, analyze the website and provide a concise 300 words overview describing what the company does, its main products or services, and their target client profile. At the end provide a fun fact about the company that stands out (**FUN-FACT**) - Fun fact should be interesting, non-generic and fun, something special and unqiue about the company.\n",
+              "role": "system"
+            },
+            {
+              "content": "=Company Name: {{ $('Get leads').item.json.company_name }}\nCompany Website: {{ $('Get leads').item.json.organization_website_url }}\nCompany LinkedIn: {{ $('Get leads').item.json.organization_linkedin_url }}"
+            }
+          ]
+        },
+        "options": {},
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.perplexity",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        688
+      ],
+      "id": "88cf9acf-8d99-42bd-962f-e140ce7ebc42",
+      "name": "Perplexity1",
+      "credentials": {
+        "perplexityApi": {
+          "id": "JNfWf7uwfba2TYLV",
+          "name": "Perplexity account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C0A0FS69XNJ",
+          "mode": "list",
+          "cachedResultName": "danteov-kanal"
+        },
+        "text": "=Ejla ekipa završio vam je workflow za European B2B Tech. Provjerite si rezultate.\n\nZove se {{ $workflow.name }}",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        784,
+        -48
+      ],
+      "id": "f0988459-6022-40cb-9872-05b03957f215",
+      "name": "Slack",
+      "webhookId": "ce7cb41e-5a9d-4b5c-bf77-ed62784c9f7f",
+      "executeOnce": true,
+      "credentials": {
+        "slackApi": {
+          "id": "mNInovdtpAnmStOr",
+          "name": "Slack account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Slack",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Request LinkedIn Profile",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Request LinkedIn Posts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Request LinkedIn Profile": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add Row": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5 Column Personalization": {
+      "main": [
+        [
+          {
+            "node": "Mark row as done",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get leads": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Request LinkedIn Posts": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Set \"No Posts\" message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Set \"No Posts\" message": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Perplexity1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Get leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark row as done": {
+      "main": [
+        [
+          {
+            "node": "Add Row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Perplexity1": {
+      "main": [
+        [
+          {
+            "node": "5 Column Personalization",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "jFCpVfrhuY8lajNt"
+  },
+  "versionId": "22cf1fc6-f11d-4301-99ce-9aea6ec4ff88",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "0f816eca152a33f384c3e3264b8e1f84a976f134689685a56c827c8aaefd38ff"
+  },
+  "id": "38nWu3SXo9vp43R8",
+  "tags": []
+}

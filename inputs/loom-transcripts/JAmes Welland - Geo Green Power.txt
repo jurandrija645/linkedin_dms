@@ -1,0 +1,40 @@
+0:00 Hi James, my name is Andrew. I know you probably don't know me, but that's okay. Uhm, I'm right here on LinkedIn profile because I added you a couple of weeks ago.
+0:09 And I just wanted to make this short video for you because I'm working with some of our companies currently implementing AI workflows for them that help reduce costs and generate revenue.
+0:19 And I just wanted to make this short video for you because I see that you're working at GeoGreen Power. And I wanted to show you, like, two or three workflows that I built for my clients that might help you as well.
+0:29 And I also want to show you this AI agent that I built for GeoGrid Empower specifically, so this is trained on your guys' website.
+0:37 And this is just a mini-prototype agent which I wanted to show you, and you can use and test it out at this link to see which data it knows and how it follows, frequently asked questions about your services.
+0:49 And so, yeah, I wanted to show you, like, two or three workflows that I have right here, which I'm implementing for small companies, and maybe they can help you guys as well.
+0:56 If you wanted to try one of them, you can completely try it for free for 30 days. I can implement one for you in about 48 hours if you want to try it out.
+1:05 But nonetheless, if you decide that this is not for you, this video is going to take, like, five, six minutes, maybe you learn something about how AI workflows are implementing, being implemented across businesses right now.
+1:15 Maybe you get some ideas, maybe you get some cool insights. So yeah, I just wanted to make this short video.
+1:20 Thank you. So I'm going to jump in, show you two or three workflows, and then an agent that I built specifically for GeoGrid Power.
+1:28 OK, so I saw on your website that you guys have this leave a message form right here. So I'm going to touch up on that and a couple of other things.
+1:37 So I see that you are working with a lot of, so you are probably, you are doing a lot of commercial solar installations.
+1:44 So you're probably doing a big number, or your sales team is doing a big number of quotes and proposals for companies that it takes probably a lot of time to get all the data and make the proposal, then you send it to a company, and then they do it.
+2:00 Just don't respond immediately, or they forget about it, or something like that. So this workflow, which I built, is basically like a smart follow-up sequence optimizer.
+2:09 It lives inside of your CRM system, and it basically makes sure that each and every customer or lead that got a proposal or quote from you is being reminded about that every couple of days.
+2:19 Because if you have a lot, large amount of proposals that you are doing, even if you have a large sales team, it takes a lot of their time to follow up with every single customer, or ask them if there's anything that they need to clarify or something like that, if they have any questions, and this workflow
+2:36 does this exactly. So it runs every single morning, it sees. Which of the customers inside of your CRM system need following up, basically does some evaluation and follow-up decision, and then it sends them a personalized email message, or a Slack message, or a WhatsApp message, which is personalized
+2:54 specifically for them, because this agent that drafts that message knows everything about the proposal that you made, knows about your project structure, knows everything about your company, and so it reminds them candidly about that proposal.
+3:07 It looks at something like, hey, I know I sent you this quote. three days ago about these things and about point A and point B.
+3:16 Do you have any questions about point C that I can help clarify? Just try to, It tries to engage them and tries to move them into your pipeline, because people just forget about proposals, and with this workforce, we are able to, like, extract 20 to 30 percent of customers that would likely die inside
+3:34 of the CRM system, just because sales teams have a lot of things to do, and they just can't keep up with every single proposal that went out.
+3:42 And another workflow that I want to show you is, so when people are looking for solar installation services, they're usually going on Google, then they're sending a couple of inquiries to a couple of different companies on Google, and we found that whichever one responds first usually gets the job, and
+3:59 that's just how it works. How the situation works, and that's what we saw across our clients. And so we built a system that reads the inquiry which a customer sends, so this would be sent through your leave a message form right here, and then when a customer sends that information, this AI basically 
+4:19 reads that information, does ALE qualification, which is tailored to your specific company, and then it basically decides if this customer is a qualified lead or if it's not a qualified lead, if it's a very important lead or a less important lead.
+4:34 And after that, if it's a less important lead or just not a qualified customer, it can like send them an email, um, which is also very so personalized based on the information that they left, um, and if it's a really important lead, which you want to respond right now, and basically notifies your team
+4:50 either on Slack, on WhatsApp, it sends personalized SMS, it sends personalized email message to that person who just left their information inside of like two or three minutes.
+4:59 In this way, people who want solar services see that your company responded first in a personalized way. They are told that the team is going to call them back in a couple of minutes, like 10-20 minutes if the job is very important.
+5:13 And then when your team is notified, they can just call them back and that lead is captured immediately before they drift to the competition.
+5:20 So this with this, um, speed to lead system, but this is just a, just one basic one that we, uh, that we built.
+5:27 It's also connected to like calendar, you can immediately book, uh, book meetings and stuff like that, but this is just a basic, basic structure right here.
+5:35 Okay. And then if you want to test your own, uh, AI agent that I built specifically for Geogreen Power. So this is trained on information, uh, which is on your websites.
+5:46 So I see that you are also doing EV charger installer. So if I ask this question, for example, do you do EV chargers?
+5:58 Okay, let's see what an answer says yeah, we absolutely do install commercial EV charging solutions for businesses. Okay. So, uh, uh, there's also like a voice agent, like a secretary agent, which can, which is right here, which you can talk to it as a voice mode.
+6:11 And so this usually lives on the, on the phone. It works after hours when your team cannot pick up just, just to make sure that no lead is left unanswered, that they are given the information and that they are, uh, that they are just forward into your CRM system.
+6:27 Okay. So this it. If you want to try this agent, feel free to look at this link. If you wanted to try any of these workflows or if you want to just talk to me and see how these workflows can maybe implemented or changed or customized specifically for GeoGrid and Python.
+6:40 Power and what you guys are doing. Uh, feel free to just, uh, leave, uh, just respond to my LinkedIn message.
+6:46 We can schedule a call, like a 20 minute call. Absolutely. No obligation. Uh, we can just get to know each other and see if, uh, if my agency can help you.
+6:54 Yeah. So this is my agency, my dept of AI. We do this stuff every single day. We help HVAC, solar and home service companies.
+7:02 Yeah, that's it. Uh, if you, if you made it this far, James, uh, thank you for watching. I hope this was valuable for you.
+7:08 I hope I gave you some valuable insight. But that's it. Hope to talk to you soon then. Bye bye.

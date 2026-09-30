@@ -1,0 +1,25 @@
+# env
+.env
+.env.*
+!.env.example
+
+# osobni podaci - nikad u git
+inputs/linkedin/
+!inputs/linkedin/README.md
+
+# deps & build
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+
+# vercel
+.vercel
+
+# os
+.DS_Store
+Thumbs.db
+
+# puni LinkedIn export - osobni podaci
+LinkedIn_data_*/

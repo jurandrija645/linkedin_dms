@@ -1,0 +1,40 @@
+{
+  "name": "Ioannis Georgoulis",
+  "linkedin_url": "https://www.linkedin.com/in/ioannis-georgoulis-13836219",
+  "role": "Co-CEO i suosnivac",
+  "company": "Kanion Co (Kanion Air Conditioners)",
+  "company_website": "https://kanionco.com/",
+  "location": "Hong Kong",
+  "vertical": "hvac",
+  "identity_confidence": "high",
+  "identity_note": "The CEO Magazine intervju i njegovi LinkedIn postovi potvrdjuju: Ioannis Georgoulis i Ken Fung su suosnivaci Kanion Co, proizvodjaca inverter klima uredjaja, osnovanog 2010.",
+  "tier": "SKIP",
+  "tier_reason": "Globalni proizvodjac klima uredjaja koji prodaje preko distributera, ne instalater s lokalnim upitima, i vec ima vlastitu AI platformu (K-Climate Hub i K-Mind AI).",
+  "asset_type": "none",
+  "asset_reason": "Pravilo 1, tier SKIP.",
+  "one_liner": "Preskoceno: Ioannis Georgoulis je co-CEO Kanion Co, proizvodjaca klima iz Hong Konga. Nije nas kupac.",
+  "summary": [
+    "Kanion Co, Hong Kong, od 2010, inverter klima uredjaji, prisutni u Grckoj i drugdje preko distributera.",
+    "Imaju K-Climate Hub s K-Mind AI za HVAC tehnicare."
+  ],
+  "observed_on_site": [],
+  "offer": "",
+  "hook_type": "other",
+  "hook_line": "",
+  "tech_stack": [],
+  "opener": "",
+  "video_beats": [],
+  "show_on_their_site": [],
+  "workflows": [],
+  "language": "en",
+  "dm": "",
+  "permission_dm": "",
+  "followup_viewed": "",
+  "followup_not_viewed": "",
+  "avoid": [],
+  "sources": [
+    "https://www.theceomagazine.com/executive-interviews/manufacturing/ioannis-georgoulis-and-ken-fung/",
+    "https://www.linkedin.com/in/ioannis-georgoulis-13836219/",
+    "https://kanionco.com.gr/en/"
+  ]
+}

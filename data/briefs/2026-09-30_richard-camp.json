@@ -1,0 +1,56 @@
+{
+  "name": "Richard Camp",
+  "linkedin_url": "https://www.linkedin.com/in/richard-camp-59473922",
+  "role": "Sales Manager (Executive Sales Manager)",
+  "company": "Air Solutions, LLC",
+  "company_website": "https://www.goairsolutions.com/",
+  "location": "Juzna Kalifornija, SAD (firma iz Haywarda, CA)",
+  "vertical": "hvac",
+  "identity_confidence": "high",
+  "identity_note": "LinkedIn naslov Sales Manager @ Air Solutions, LLC, a opis profila navodi goairsolutions.com i brojeve firme. Nije jasno vodi li cijelu prodaju ili samo SoCal, i tko je vlasnik (na stranici nema imena).",
+  "tier": "B",
+  "tier_reason": "Najam prijenosne klime i grijanja za firme u CA, NV i WA, vrucih upita i placenih oglasa. On je sales manager, pa nije sigurno odlucuje li o alatima. Prvo pitati.",
+  "asset_type": "n8n_loom",
+  "asset_reason": "Pravilo 2, tier B. I da je A, pravilo 5: nije vlasnik nego prodaja.",
+  "one_liner": "Sljedeci: Richard Camp. Sales manager u Air Solutions, najam prijenosne klime za firme po Kaliforniji. Ne snimaj, prvo opener pa permission DM.",
+  "summary": [
+    "Air Solutions iz Haywarda iznajmljuje prijenosne klime 1-12 tona, grijace, odvlazivace, air scrubbere. Kupci su server sobe, uredi, labovi, bolnice, skladista, gradilista.",
+    "Pokrivaju Kaliforniju, Nevadu i Washington. 24/7 telefon 833-224-7368, istice 500+ recenzija.",
+    "Richard je sales manager, prije toga executive sales. Vlasnik nije naveden na stranici."
+  ],
+  "observed_on_site": [
+    "24/7 telefon na vrhu, 1-833-AC-4-RENT.",
+    "Proces do ponude je kontakt, procjena primjene, provjera struje i ventilacije, pa ponuda. Nema instant ponude ni kalkulatora tonaze.",
+    "Nema live chata.",
+    "Google Reviews widget i natpis Over 500+ Reviews na naslovnici.",
+    "U kodu CallRail i Google Ads konverzije, znaci placaju oglase i prate pozive.",
+    "Formulari su Gravity Forms."
+  ],
+  "offer": "Instant odgovor na web upit za najam: formular pita prostor, velicinu i struju, i klijent u par minuta dobije preporuku jedinice i ponudu, i u 21h.",
+  "hook_type": "speed_to_lead",
+  "hook_line": "Placate Google Ads za hitne upite, pozive pratite CallRailom, a tko ispuni formular umjesto da nazove ceka da netko procijeni tonazu.",
+  "tech_stack": ["WordPress", "Elementor", "Astra", "Google Reviews widget", "CallRail", "Gravity Forms", "Google Analytics 4", "Google Ads konverzije", "Rank Math"],
+  "opener": "Richard, quick one. You track ad calls with CallRail, but the rental form goes into Gravity Forms. When a server room overheats at 9pm and someone fills the form instead of calling, how fast does a quote go back?",
+  "video_beats": [],
+  "show_on_their_site": [],
+  "workflows": [
+    {"id": "zmWzs6Eymm0BehhY", "why": "Web upit se kvalificira (prostor, velicina, struja, trajanje najma) i odmah dobije odgovor i termin, sto im fali iza formulara."},
+    {"id": "HN36JmjjBr9QiHwq", "why": "Chat agent koji zna njihove jedinice i pomogne odabrati tonazu, jer to je prvo pitanje svakog upita."}
+  ],
+  "workflow_gap": {"what_to_show": "", "n8n_search": ""},
+  "language": "en",
+  "dm": "",
+  "permission_dm": "Richard, you are paying for rental ads and tracking the calls, but form enquiries still wait for someone to size the unit. I build the bit that replies in minutes with a recommended unit and quote. Happy to record 90 seconds on how it would look for Air Solutions. Want it?",
+  "followup_viewed": "",
+  "followup_not_viewed": "Richard, following up on the form question. If lead handling sits with someone else at Air Solutions, point me their way and I will stop filling your inbox. Andrew",
+  "avoid": [
+    "Ne nuditi redizajn ni recenzije, vec imaju 500+ recenzija i widget.",
+    "Ne govoriti da ne odgovaraju na pozive, imaju 24/7 liniju.",
+    "Ne pretpostavljati da odlucuje o alatima.",
+    "Ne izmisljati koliko upita dolazi preko formulara."
+  ],
+  "sources": [
+    "https://www.linkedin.com/in/richard-camp-59473922/",
+    "https://www.goairsolutions.com/"
+  ]
+}

@@ -1,0 +1,32 @@
+0:00 Hi Oliver, my name is Andrew. I know you probably don't know me, but that's okay. I added you on LinkedIn a couple of weeks ago, and I just just wanted to make this short video for you because I usually work with solar companies generating them about five to ten thousand euros on a monthly basis by implementing
+0:18 AI workflows inside of their businesses. So I just wanted to make this short video for you demonstrating what AI workflows I'm implementing across solar companies right now.
+0:29 and then if you decide you want to try one of those I can get you one up and running in about 48 hours and I can let you test it for about 30 days to just see how you like it if it brings any value to you.
+0:39 But nonetheless you can watch this video until the end and you can maybe get some ideas on how to make your day-to-day a bit a bit faster using AI workflows inside of your own business maybe you get some ideas and maybe learn something after this video I hope so.
+0:55 Yeah so I just wanted to show you like two or three of them I've built about hundreds of them but I just picked out two or three of them which I think would most benefit your specific position instead of P4 solver.
+1:09 So I was on your website and I saw that you have this book a free survey form and a bunch of other things.
+1:16 I also checked out your YouTube videos which are pretty cool. But, yeah, so let me just show you these two workflows and then you can judge for yourself if this is something that could bring value to you.
+1:30 So, as I mentioned, you have this input form on your website and the first system is actually a workflow that acts as a speed-to-lead system.
+1:39 So that means a system that responds to every inbound inquiry very very fast. So that means when a lead, when a prospect just leaves their data inside of that form and just submits a form, then this workflow is fired.
+1:54 And then it basically does some AI lead qualification, which can qualify based on that data if a lead is fired.
+2:00 So it's like an urgent if you want to reach out to them immediately because it's a really really good project for you and good prospect or it's just a, or if it's on the lower end and you just want to push them for a side for a moment.
+2:13 And when it does this AI lead qualification, it then basically goes over in two routes. And the, the first branch would be the branch for your less important leads where you are responding to them immediately via email or WhatsApp message or whatever in a personalized way based on the data that they 
+2:29 left. And so you are leaving more information or you are giving them a booking link or whatever is needed to move the process further.
+2:37 And, uh, when you respond inside five minutes and in such a personalized way, this just make sure that the lead does not go to the competition, but it stays with your business because they leave some information.
+2:46 they immediately get some feedback back, and then they are more incentivized to continue through the pipeline. And if a project or a lead that is really important reaching out to you is very, very high intent and you want to catch it immediately, then it goes to a second route, which is connected to 
+3:04 the calendar. It knows your availability, uh, knows the availability of your team. And it can then after that, uh, either trigger an AI phone call, or it can just leave a summary for your team.
+3:16 And then you can get back to that lead as fast as possible. If there's an AI phone call triggered, then this, uh, this workflow continues here, which is connected to your calendar and then can talk to that lead and can book a meeting with them immediately.
+3:29 So what this accomplishes that no inquiry is left unanswered and then you're answering inside five minutes which is most important for those kinds of inquiries.
+3:39 Uh, before people go to the competition and before they move on, uh, from your business. And the second workflow, which I want to show you today is, uh, basically like a smart follow-up sequence optimizer.
+3:51 Uh, this one's connected to the Zoho CRM, but it can be connected to any CRM, of course. And this acts as a follow-up sequence to nurture leads.
+3:59 Once you send them a proposal, a quote or whatever is needed. So when, when a prospect first comes to you, they tell you how big of a roof they have, they tell you what their electricity bill is or whatever, you make a proposal with them, you tell them how much the project is gonna cost and this usually
+4:17 sits just in the CRM system. Nobody's following up with these leads and they just die quietly in the CRM system because no team has that much time on their hands to just follow up with every single lead on a daily basis.
+4:30 And this workflow solves that in a way that it's fired every single morning. It can basically detect which leads need following up, which have not received any messages in the past couple of days.
+4:44 It can then just choose up all the data from that person. their project, their quote, everything that they've received, and then the AI evaluation and follow-up decision begins, and then the AI can write like a personalized messages to you.
+4:59 To them, referencing what was in that proposal, referencing their specific project, referencing the roof or whatever is needed to move the project along.
+5:08 And then that message can be sent either through email or either, either through Slack or WhatsApp or whatever channels you're using to communicate with your prospects.
+5:18 So, uh, this achieves the reactivation of leads in the CRM system, which are just sitting around. You've done all the work previously that was needed to sign these people but people don't respond immediately and this way we are reactivating those leads and we are trying to move them further inside of
+5:38 the pipeline. All the way to the deal. Yeah. So that's it. I just wanted to show you the, these two workflows and maybe you get some value from them.
+5:46 As I mentioned, if you want to try one of them, I can get, uh, get you one up and running in about 48 hours.
+5:52 I can let you run it for 30 days completely for free and you can test it out yourself. You can see if this brings value, any value to you.
+5:59 And if it does, then maybe we can work together. Okay. Yeah, that's it. Um, if you like to schedule a call with me, if you'd like to explore this further, just, just reply to my, Just reply to my message and then that's it.
+6:13 Yeah. Thank you if you watched this long and bye-bye

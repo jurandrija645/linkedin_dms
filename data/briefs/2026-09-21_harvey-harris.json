@@ -1,0 +1,49 @@
+{
+  "name": "Harvey Harris",
+  "linkedin_url": "https://www.linkedin.com/in/harveyharris",
+  "role": "Co-founder, vodi marketing",
+  "company": "InboxFlow",
+  "company_website": "https://inboxflow.net/",
+  "location": "Velika Britanija",
+  "vertical": "b2b_saas",
+  "identity_confidence": "high",
+  "identity_note": "LinkedIn URL iz CSV-a vodi na uk.linkedin.com/in/harveyharris s naslovom Co-Founder InboxFlow, potvrdjeno i na inboxflow.net/about.",
+  "tier": "C",
+  "tier_reason": "Nije klijent nego peer. InboxFlow je cold email infrastruktura, znaci alat koji bismo mi mogli koristiti za svoje outbound kampanje. Nema smisla prodavati mu AI automatizacije, ima smisla razgovarati kao kolega.",
+  "asset_type": "none",
+  "asset_reason": "Pravilo 1. Tier C nema asset.",
+  "one_liner": "Sljedeci: Harvey Harris. Co-founder InboxFlowa u UK, cold email infrastruktura. Nema videa, ide obican ljudski DM kao kolegi koji radi isti posao s druge strane.",
+  "summary": [
+    "InboxFlow je cold email infrastruktura: dedicirani IP-evi, automatska autentikacija, instant mailboxovi, fokus na deliverability.",
+    "Zanimljiv detalj proizvoda: cita stvarne rezultate kampanje, prepozna inboxove koji zaostaju za jacim posiljateljima u istoj kampanji i zamijeni ih rezervnima.",
+    "Harvey vodi marketing i podrsku, korisnici ga u recenzijama izdvajaju poimence."
+  ],
+  "observed_on_site": [
+    "inboxflow.net ima usporedbe s konkurencijom (/compare) i zasebnu wall of love stranicu s recenzijama (love.inboxflow.net).",
+    "Pozicioniranje je oko oporavka odgovora koji se gube zbog slabe infrastrukture posiljatelja."
+  ],
+  "offer": "Nista se ne prodaje. Razgovor kolege s kolegom, mi vrtimo outbound kampanje za klijente pa je njihov proizvod nesto sto bismo realno koristili.",
+  "hook_type": "other",
+  "hook_line": "Ono sto zamjenjuje inboxove koji zaostaju za jacim posiljateljima unutar iste kampanje je rijetko dobra ideja, vecina alata to jednostavno ne radi.",
+  "video_beats": [],
+  "show_on_their_site": [],
+  "workflows": [],
+  "language": "en",
+  "dm": "Harvey, the thing where InboxFlow spots inboxes lagging behind stronger senders in the same campaign and swaps them out is genuinely clever, most tools just warm and hope. We run outbound for clients so we sit on the other side of that problem all day. Not pitching you anything, just wanted to say it is a good product. Andrew",
+  "permission_dm": "",
+  "followup_viewed": "",
+  "followup_not_viewed": "Harvey, no agenda here, just following up once. If you ever want a second pair of eyes from someone running campaigns rather than building the infra, happy to swap notes. Andrew",
+  "avoid": [
+    "Ne prodavati mu AI automatizacije ni redizajn sajta. On gradi softver, nije nas ICP.",
+    "Ne slati Loom. Peer ne dobiva video.",
+    "Ne glumiti da smo veci nego jesmo, vidjet ce kroz to odmah.",
+    "Ne traziti partnerstvo ni affiliate u prvoj poruci."
+  ],
+  "sources": [
+    "https://uk.linkedin.com/in/harveyharris",
+    "https://inboxflow.net/about",
+    "https://inboxflow.net/compare",
+    "https://love.inboxflow.net/",
+    "https://www.salesforge.ai/directory/sales-tools/inboxflow"
+  ]
+}
